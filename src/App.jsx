@@ -262,7 +262,8 @@ export default function App() {
                 </button>
               </article>
 
-              <article className="pricing-card featured-pricing">
+              <article className="pricing-card featured-pricing best-value">
+                <div className="best-badge">Best value</div>
                 <p className="pricing-label">Annual</p>
                 <strong>₹2,500</strong>
                 <span>per year</span>
@@ -271,7 +272,7 @@ export default function App() {
                   <li>Best value for long-term access</li>
                   <li>Priority membership plan</li>
                 </ul>
-                <button type="button" className="nav-button">
+                <button type="button" className="nav-button gold">
                   Join Annually
                 </button>
               </article>

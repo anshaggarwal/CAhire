@@ -639,6 +639,43 @@ button{
   background:linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
 
+/* Golden theme for annual best-value card */
+.pricing-card.best-value{
+  background:linear-gradient(180deg, #fffaf2 0%, #fff7ee 60%);
+  border:1px solid rgba(181, 134, 0, 0.18);
+  box-shadow:0 18px 46px rgba(181,134,0,0.10), 0 6px 18px rgba(31,41,55,0.06);
+  position:relative;
+}
+
+.pricing-card.best-value .best-badge{
+  position:absolute;
+  right:16px;
+  top:14px;
+  background:linear-gradient(180deg,#ffd966 0%,#f4b400 100%);
+  color:#1f1b00;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:12px;
+  box-shadow:0 6px 18px rgba(244,180,0,0.16);
+}
+
+/* Gold action button */
+.nav-button.gold{
+  background:linear-gradient(180deg,#f6c84c 0%,#e6a700 100%);
+  color:#1b1200;
+  box-shadow:0 12px 30px rgba(230,167,0,0.18);
+  border-color:rgba(0,0,0,0.03);
+}
+
+.pricing-card.best-value strong{
+  color:#6b3f00;
+}
+
+.pricing-card.best-value .pricing-points li{
+  color:var(--text);
+}
+
 .pricing-label{
   margin:0 0 12px;
   color:var(--accent);
