@@ -715,7 +715,9 @@ button{
 /* Make the mock section header stand out and the card lift with a subtle grey shadow */
 .mock-section .workspace-intro{ text-align:center }
 .mock-section .workspace-intro h3{ color:#2563eb; font-weight:600 }
-.mock-card{ border:1px solid rgba(226,232,240,0.7); padding:20px; border-radius:12px; max-width:760px; margin:0 auto; background:#fff; box-shadow:0 18px 40px rgba(15,23,42,0.06) }
+.mock-card{ border:1px solid rgba(226,232,240,0.7); padding:20px; border-radius:12px; max-width:100%; margin:0; background:#fff; box-shadow:0 18px 40px rgba(15,23,42,0.06) }
+.mock-card .stack-form{ max-width:760px; margin:0; }
+.mock-card .mock-benefits{ max-width:760px; margin:0 0 12px 0; }
 .topic-list{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px }
 .checkline{ gap:8px; }
 .mock-actions{ margin-top:12px }
