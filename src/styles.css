@@ -1314,7 +1314,8 @@ textarea:focus{
   .brand-block h1{ display:none }
   .brand-sub{ display:none }
 
-  .topbar-nav{ display:flex; gap:10px; overflow-x:auto; white-space:nowrap; font-size:14px; }
+  /* hide full nav on very small screens; use hamburger/drawer */
+  .topbar-nav{ display:none }
   .topbar-nav button{ padding:8px 10px; }
 
   .topbar-actions{ gap:8px }
