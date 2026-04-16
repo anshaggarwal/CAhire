@@ -710,14 +710,44 @@ button{
   .social{ width:30px; height:30px }
 }
 
-.mock-section{ padding:34px 0; background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%); position:relative; }
+.mock-section{
+  padding:40px 0 72px;
+  background:linear-gradient(180deg, #ffffff 0%, var(--surface-band) 100%);
+  box-shadow:inset 0 1px 0 rgba(17,24,39,0.04);
+  position:relative;
+}
 
-/* Make the mock section header stand out and the card lift with a subtle grey shadow */
-.mock-section .workspace-intro{ text-align:center }
-.mock-section .workspace-intro h3{ color:#2563eb; font-weight:600 }
-.mock-card{ border:1px solid rgba(226,232,240,0.7); padding:20px; border-radius:12px; max-width:1120px; margin:0 auto; background:#fff; box-shadow:0 18px 40px rgba(15,23,42,0.06) }
-.mock-card .stack-form{ max-width:760px; margin:0 auto; }
-.mock-card .mock-benefits{ max-width:760px; margin:0 auto 12px; }
+.mock-section .workspace-intro{
+  text-align:left;
+  max-width:720px;
+}
+
+.mock-section .workspace-intro h3{
+  color:var(--text);
+  font-weight:500;
+  max-width:14ch;
+}
+
+.mock-section .workspace-intro .problem-text{
+  max-width:60ch;
+}
+
+.mock-card{
+  border:1px solid rgba(226,232,240,0.7);
+  padding:20px;
+  border-radius:12px;
+  background:#fff;
+  box-shadow:var(--shadow-divider);
+}
+
+.mock-card .stack-form{
+  max-width:760px;
+}
+
+.mock-card .mock-benefits{
+  max-width:760px;
+  margin:0 0 12px;
+}
 .topic-list{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px }
 .checkline{ gap:8px; }
 .mock-actions{ margin-top:12px }
