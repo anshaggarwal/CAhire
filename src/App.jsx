@@ -167,7 +167,7 @@ export default function App() {
               <div>
                 <p className="section-label">Mock Interviews</p>
                 <h3>Schedule a 30-minute mock interview with professional feedback</h3>
-                <p className="problem-text">A focused 30-minute interview with structured feedback from experienced finance recruiters. Select topics, choose a slot, and schedule. Fee: ₹500. Payment will be handled at checkout.</p>
+                <p className="problem-text">A focused 30-minute interview with structured feedback from experienced finance recruiters. Select topics, choose a slot, and schedule. Fee: ₹250. Payment will be handled at checkout.</p>
               </div>
             </div>
 
@@ -215,7 +215,7 @@ export default function App() {
                         alert('Please provide full name, email, select at least one topic, and pick a slot.')
                         return
                       }
-                      const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics: checked, price:500 }
+                      const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics: checked, price:250 }
                       const list = JSON.parse(localStorage.getItem('mock_interviews') || '[]')
                       list.push(entry)
                       localStorage.setItem('mock_interviews', JSON.stringify(list))
@@ -224,12 +224,12 @@ export default function App() {
                       if (conf) conf.remove()
                       const node = document.createElement('div')
                       node.className = 'mock-confirmation'
-                      node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹500 — payment pending at checkout.</p>`
+                      node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹250 — payment pending at checkout.</p>`
                       document.querySelector('.mock-card').appendChild(node)
                       // Clear form
                       form.reset()
                     }}>
-                      Schedule Mock Interview — ₹500
+                      Schedule Mock Interview — ₹250
                     </button>
                   </div>
                 </form>
@@ -379,7 +379,7 @@ export default function App() {
             <div className="pricing-grid">
               <article className="pricing-card">
                 <p className="pricing-label">Monthly</p>
-                <strong>₹250</strong>
+                <strong>₹500</strong>
                 <span>per month</span>
                 <ul className="pricing-points">
                   <li>Access verified roles</li>
@@ -394,7 +394,7 @@ export default function App() {
               <article className="pricing-card featured-pricing best-value">
                 <div className="best-badge">Best value</div>
                 <p className="pricing-label">Annual</p>
-                <strong>₹2,500</strong>
+                <strong>₹5,000</strong>
                 <span>per year</span>
                 <ul className="pricing-points">
                   <li>Everything in Monthly</li>
