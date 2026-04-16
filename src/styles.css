@@ -229,7 +229,7 @@ button{
 /* Mobile drawer */
 .mobile-drawer{ position:fixed; inset:0; z-index:60; display:flex; }
 .drawer-backdrop{ position:absolute; inset:0; background:rgba(15,23,42,0.42); }
-.drawer-panel{ position:relative; margin-left:auto; width:min(320px, 86%); height:100%; background:#fff; box-shadow:0 30px 80px rgba(17,24,39,0.32); padding:18px; display:flex; flex-direction:column; gap:12px }
+.drawer-panel{ position:relative; margin-left:auto; width:min(320px, 86%); height:100%; background:#fff; box-shadow:0 30px 80px rgba(17,24,39,0.32); padding:18px; display:flex; flex-direction:column; gap:12px; transform:translateX(12%); animation:slideIn 260ms cubic-bezier(.2,.8,.2,1) forwards }
 .drawer-header{ display:flex; justify-content:space-between; align-items:center }
 .drawer-close{ background:transparent; border:none; font-size:22px }
 .drawer-links{ display:flex; flex-direction:column; gap:8px; margin-top:8px }
@@ -240,6 +240,34 @@ button{
   .topbar-nav{ display:none }
   .hamburger{ display:flex }
   .topbar-actions{ gap:8px }
+  /* Make topbar fixed and compact on phones like leading mobile sites */
+  .topbar{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    height:56px;
+    padding:6px 0;
+    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.85);
+    border-bottom:1px solid rgba(17,24,39,0.04);
+    z-index:80;
+  }
+  .page-wrap{ padding-top:56px; }
+  .topbar-inner{
+    grid-template-columns:44px 1fr 44px;
+    gap:6px;
+    min-height:56px;
+    align-items:center;
+  }
+  .brand-block{ justify-self:center; }
+  /* hide full action buttons to keep header minimal; they remain in drawer */
+  .topbar-actions > button:not(.hamburger){ display:none }
+}
+
+@keyframes slideIn{
+  from{ transform:translateX(20%); opacity:0 }
+  to{ transform:translateX(0); opacity:1 }
 }
 
 .nav-button,
@@ -1282,7 +1310,8 @@ textarea:focus{
   .brand-chip{ width:7px; height:7px }
   .brand-stem{ width:14px; height:6px; left:10px; top:14px }
 
-  .brand-block h1{ font-size:18px; margin:0 }
+  /* Hide brand title on very small screens to keep topbar compact */
+  .brand-block h1{ display:none }
   .brand-sub{ display:none }
 
   .topbar-nav{ display:flex; gap:10px; overflow-x:auto; white-space:nowrap; font-size:14px; }

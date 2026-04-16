@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import EmployerTab from './components/EmployerTab'
 import CATab from './components/CATab'
 import ArticleshipTab from './components/ArticleshipTab'
@@ -15,6 +15,22 @@ const tabs = [
 export default function App() {
   const [tab, setTab] = useState('jobs')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    // lock body scroll when drawer open
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    function handleResize() {
+      if (window.innerWidth > 640 && mobileMenuOpen) setMobileMenuOpen(false)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [mobileMenuOpen])
 
   return (
     <div className="app-shell">
