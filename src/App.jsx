@@ -14,6 +14,7 @@ const tabs = [
 
 export default function App() {
   const [tab, setTab] = useState('jobs')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="app-shell">
@@ -54,7 +55,41 @@ export default function App() {
             <button type="button" className="nav-button" onClick={() => setTab('company')}>
               Post a job
             </button>
+            <button
+              type="button"
+              className="hamburger"
+              aria-label="Open menu"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
           </div>
+
+          {mobileMenuOpen && (
+            <div className="mobile-drawer" role="dialog" aria-modal="true">
+              <div className="drawer-backdrop" onClick={() => setMobileMenuOpen(false)} />
+              <div className="drawer-panel">
+                <div className="drawer-header">
+                  <strong>CharterPrime</strong>
+                  <button className="drawer-close" onClick={() => setMobileMenuOpen(false)} aria-label="Close menu">×</button>
+                </div>
+                <div className="drawer-links">
+                  <button onClick={() => { setTab('jobs'); setMobileMenuOpen(false) }}>Jobs</button>
+                  <button onClick={() => { setTab('company'); setMobileMenuOpen(false) }}>Companies</button>
+                  <button onClick={() => { setTab('articleship'); setMobileMenuOpen(false) }}>Articleship</button>
+                  <button onClick={() => { setTab('cas'); setMobileMenuOpen(false) }}>CA Profiles</button>
+                </div>
+                <div className="drawer-actions">
+                  <button className="nav-button" onClick={() => { setTab('company'); setMobileMenuOpen(false) }}>
+                    Post a job
+                  </button>
+                  <button className="nav-button ghost" onClick={() => setMobileMenuOpen(false)}>Sign in</button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
