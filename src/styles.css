@@ -1230,3 +1230,44 @@ textarea:focus{
     flex-direction:column;
   }
 }
+
+/* Additional mobile / small-screen optimizations */
+@media (max-width: 960px){
+  .pricing-grid{ grid-template-columns: 1fr; }
+  .pricing-card{ padding:20px; }
+  .pricing-card .pricing-points{ margin-top:12px; }
+  .topbar-inner{ gap:10px; }
+}
+
+@media (max-width: 640px){
+  .nav-button,
+  .stack-form button,
+  .search-row button,
+  .card-footer .nav-button{
+    width:100%;
+    display:block;
+  }
+
+  .listing-grid{ grid-template-columns: 1fr; }
+  .listing-card{ padding:14px; }
+  .listing-card h4{ font-size:18px; }
+  .logo-tile{ width:36px; height:36px; border-radius:8px; font-size:14px; }
+  .badge-row{ gap:6px; }
+  .tag{ padding:6px 8px; font-size:12px; }
+
+  .hero-center h2{ font-size:32px; max-width:26ch; }
+  .hero-text, .hero-tagline{ font-size:15px; }
+
+  .paywall-card{ width:100%; padding:20px; border-radius:12px; }
+  .paywall-lock{ min-width:56px; padding:8px 10px; font-size:10px; }
+
+  .workspace-sidebar{ order:2; }
+  .workspace-main{ order:1; }
+  .workspace-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px){
+  .hero-center h2{ font-size:28px; }
+  .brand-block h1{ font-size:22px; }
+  .page-wrap{ width:calc(100vw - 24px); }
+}
