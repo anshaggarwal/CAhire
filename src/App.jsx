@@ -332,6 +332,88 @@ export default function App() {
           </div>
         </section>
       </main>
+      <footer className="site-footer">
+        <div className="page-wrap footer-grid">
+          <div className="footer-block">
+            <div className="brand-block footer-brand">
+              <div className="brand-mark" aria-hidden="true">
+                <span className="brand-chip chip-top-left" />
+                <span className="brand-chip chip-top-right" />
+                <span className="brand-chip chip-bottom-left" />
+                <span className="brand-chip chip-bottom-right" />
+                <span className="brand-stem" />
+              </div>
+              <div>
+                <h4>CASE PLATFORMS</h4>
+              </div>
+            </div>
+
+            <address className="footer-address">
+              #51, 3rd Floor, Le Parc Richmonde, Richmond Road,
+              <br /> Shanthala Nagar, Richmond Town, Bangalore - 560025
+            </address>
+
+            <div className="footer-social">
+              <span>Find us on:</span>
+              <div className="social-icons">
+                <span className="social">f</span>
+                <span className="social">t</span>
+                <span className="social">▶</span>
+                <span className="social">in</span>
+                <span className="social">✳</span>
+              </div>
+            </div>
+
+            <p className="footer-contact">Contact us on support@smallcase.com</p>
+          </div>
+
+          <div className="footer-links">
+            <div>
+              <strong>Company</strong>
+              <ul>
+                <li>Help & Support</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Press</li>
+                <li>Careers</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong>Resources</strong>
+              <ul>
+                <li>Calculators</li>
+                <li>Search Stocks</li>
+                <li>Investment Guides</li>
+                <li>Popular Sectors</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong>Offerings</strong>
+              <ul>
+                <li>Publisher</li>
+                <li>Gateway</li>
+                <li>Brokers</li>
+                <li>Tickertape</li>
+                <li>Ecosystem</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong>Fine Print</strong>
+              <ul>
+                <li>Disclosures</li>
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Investment Tools</li>
+                <li>Additional Disclosures</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
