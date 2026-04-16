@@ -37,13 +37,7 @@ export default function App() {
       <header className="topbar">
         <div className="page-wrap topbar-inner">
           <div className="brand-block">
-            <div className="brand-mark" aria-hidden="true">
-              <span className="brand-chip chip-top-left" />
-              <span className="brand-chip chip-top-right" />
-              <span className="brand-chip chip-bottom-left" />
-              <span className="brand-chip chip-bottom-right" />
-              <span className="brand-stem" />
-            </div>
+            <img src="/src/assets/logo.png" alt="CharterPrime" className="brand-logo" />
             <div>
               <h1>CharterPrime</h1>
               <p className="brand-sub">
