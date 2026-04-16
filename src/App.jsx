@@ -167,7 +167,7 @@ export default function App() {
               <div>
                 <p className="section-label">Mock Interviews</p>
                 <h3>Schedule a 30-minute mock interview with professional feedback</h3>
-                <p className="problem-text">A focused 30-minute interview with structured feedback from experienced finance recruiters. Select topics, choose a slot, and schedule. Fee: ₹250. Payment will be handled at checkout.</p>
+                <p className="problem-text">30-minute mock interview with professional feedback. Select topics and schedule a slot.</p>
               </div>
             </div>
 
