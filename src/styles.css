@@ -300,6 +300,19 @@ button{
   position:relative;
 }
 
+/* subtle clean texture for hero background */
+.hero-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(56,126,209,0.02) 0.6px, transparent 0.6px);
+  background-size: 16px 16px;
+  opacity:0.85;
+  pointer-events:none;
+  z-index:0;
+}
+.hero-center{ position:relative; z-index:1 }
+
 .hero-section::after{
   content:"";
   position:absolute;
