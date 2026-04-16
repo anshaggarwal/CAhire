@@ -166,8 +166,8 @@ export default function App() {
             <div className="workspace-intro">
               <div>
                 <p className="section-label">Mock Interviews</p>
-                <h3>Schedule a short mock interview — Know your skills</h3>
-                <p className="problem-text">A 30-minute mock interview with feedback. Pick topics and a preferred slot. Cost: ₹500 (mock payment simulated).</p>
+                <h3>Schedule a 30-minute mock interview with professional feedback</h3>
+                <p className="problem-text">A focused 30-minute interview with structured feedback from experienced finance recruiters. Select topics, choose a slot, and schedule. Fee: ₹500. Payment will be handled at checkout.</p>
               </div>
             </div>
 
@@ -175,56 +175,59 @@ export default function App() {
               <div className="mock-card">
                 <form className="stack-form" onSubmit={(e) => e.preventDefault()}>
                   <div className="topic-list">
-                    <label className="section-label">Topics</label>
+                    <label className="section-label">Select topics</label>
                     {['Audit', 'Tax Compliance', 'Financial Reporting', 'ERP/Systems', 'Excel & Modelling'].map((t) => (
                       <label key={t} className="checkline">
-                        <input type="checkbox" name="topics" value={t} onChange={(ev) => {
-                          const checked = ev.target.checked
-                          const value = ev.target.value
-                          const current = JSON.parse(localStorage.getItem('mock_topics') || '[]')
-                          if (checked) current.push(value)
-                          else {
-                            const idx = current.indexOf(value)
-                            if (idx >= 0) current.splice(idx, 1)
-                          }
-                          localStorage.setItem('mock_topics', JSON.stringify(current))
-                        }} />
+                        <input
+                          type="checkbox"
+                          name="topics"
+                          value={t}
+                          checked={false}
+                          onChange={() => {}}
+                        />
                         <span>{t}</span>
                       </label>
                     ))}
                   </div>
 
                   <div className="split-inputs">
-                    <input placeholder="Your name" id="mock-name" />
-                    <input placeholder="Email" id="mock-email" />
+                    <input placeholder="Your full name" name="mockName" />
+                    <input placeholder="Email address" name="mockEmail" />
                   </div>
 
                   <div className="split-inputs">
-                    <input type="date" id="mock-date" />
-                    <input type="time" id="mock-time" />
+                    <input type="date" name="mockDate" />
+                    <input type="time" name="mockTime" />
                   </div>
 
                   <div className="mock-actions">
                     <button type="button" className="nav-button" onClick={() => {
-                      const name = document.getElementById('mock-name').value.trim()
-                      const email = document.getElementById('mock-email').value.trim()
-                      const date = document.getElementById('mock-date').value
-                      const time = document.getElementById('mock-time').value
-                      const topics = JSON.parse(localStorage.getItem('mock_topics') || '[]')
-                      if (!name || !email || !date || !time || topics.length === 0) {
-                        alert('Please enter name, email, pick a slot, and choose at least one topic.')
+                      // Professional flow: validate and show confirmation card
+                      const form = document.querySelector('.mock-card form')
+                      const name = form.elements['mockName'].value.trim()
+                      const email = form.elements['mockEmail'].value.trim()
+                      const date = form.elements['mockDate'].value
+                      const time = form.elements['mockTime'].value
+                      const checked = Array.from(form.elements['topics'] || [])
+                        .filter((el) => el.checked)
+                        .map((el) => el.value)
+                      if (!name || !email || !date || !time || checked.length === 0) {
+                        alert('Please provide full name, email, select at least one topic, and pick a slot.')
                         return
                       }
-                      const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics, price:500 }
+                      const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics: checked, price:500 }
                       const list = JSON.parse(localStorage.getItem('mock_interviews') || '[]')
                       list.push(entry)
                       localStorage.setItem('mock_interviews', JSON.stringify(list))
-                      localStorage.removeItem('mock_topics')
-                      document.getElementById('mock-name').value = ''
-                      document.getElementById('mock-email').value = ''
-                      document.getElementById('mock-date').value = ''
-                      document.getElementById('mock-time').value = ''
-                      alert('Scheduled! We saved your mock interview (simulated) for ' + date + ' ' + time + '. Amount: ₹500')
+                      // Show a polished inline confirmation
+                      const conf = document.querySelector('.mock-confirmation')
+                      if (conf) conf.remove()
+                      const node = document.createElement('div')
+                      node.className = 'mock-confirmation'
+                      node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹500 — payment pending at checkout.</p>`
+                      document.querySelector('.mock-card').appendChild(node)
+                      // Clear form
+                      form.reset()
                     }}>
                       Schedule Mock Interview — ₹500
                     </button>
