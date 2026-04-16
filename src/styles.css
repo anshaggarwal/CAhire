@@ -710,6 +710,19 @@ button{
   .social{ width:30px; height:30px }
 }
 
+/* Mock interview section */
+.mock-section{ padding:34px 0; background:linear-gradient(180deg,#ffffff 0%, #fbfdff 100%); }
+.mock-card{ border:1px solid var(--line); padding:18px; border-radius:12px; max-width:760px; margin:0 auto; background:#fff; box-shadow:var(--shadow-divider) }
+.topic-list{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px }
+.checkline{ gap:8px; }
+.mock-actions{ margin-top:12px }
+.mock-card input[type=date], .mock-card input[type=time]{ padding:10px }
+
+@media (max-width:640px){
+  .mock-card{ padding:14px }
+  .split-inputs{ grid-template-columns:1fr }
+}
+
 /* Make the pricing area stand out slightly as a payment section */
 .pricing-section{
   position:relative;

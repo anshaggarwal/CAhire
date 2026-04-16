@@ -161,6 +161,80 @@ export default function App() {
           </div>
         </section>
 
+        <section className="mock-section">
+          <div className="page-wrap">
+            <div className="workspace-intro">
+              <div>
+                <p className="section-label">Mock Interviews</p>
+                <h3>Schedule a short mock interview — Know your skills</h3>
+                <p className="problem-text">A 30-minute mock interview with feedback. Pick topics and a preferred slot. Cost: ₹500 (mock payment simulated).</p>
+              </div>
+            </div>
+
+            <div className="tab-shell">
+              <div className="mock-card">
+                <form className="stack-form" onSubmit={(e) => e.preventDefault()}>
+                  <div className="topic-list">
+                    <label className="section-label">Topics</label>
+                    {['Audit', 'Tax Compliance', 'Financial Reporting', 'ERP/Systems', 'Excel & Modelling'].map((t) => (
+                      <label key={t} className="checkline">
+                        <input type="checkbox" name="topics" value={t} onChange={(ev) => {
+                          const checked = ev.target.checked
+                          const value = ev.target.value
+                          const current = JSON.parse(localStorage.getItem('mock_topics') || '[]')
+                          if (checked) current.push(value)
+                          else {
+                            const idx = current.indexOf(value)
+                            if (idx >= 0) current.splice(idx, 1)
+                          }
+                          localStorage.setItem('mock_topics', JSON.stringify(current))
+                        }} />
+                        <span>{t}</span>
+                      </label>
+                    ))}
+                  </div>
+
+                  <div className="split-inputs">
+                    <input placeholder="Your name" id="mock-name" />
+                    <input placeholder="Email" id="mock-email" />
+                  </div>
+
+                  <div className="split-inputs">
+                    <input type="date" id="mock-date" />
+                    <input type="time" id="mock-time" />
+                  </div>
+
+                  <div className="mock-actions">
+                    <button type="button" className="nav-button" onClick={() => {
+                      const name = document.getElementById('mock-name').value.trim()
+                      const email = document.getElementById('mock-email').value.trim()
+                      const date = document.getElementById('mock-date').value
+                      const time = document.getElementById('mock-time').value
+                      const topics = JSON.parse(localStorage.getItem('mock_topics') || '[]')
+                      if (!name || !email || !date || !time || topics.length === 0) {
+                        alert('Please enter name, email, pick a slot, and choose at least one topic.')
+                        return
+                      }
+                      const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics, price:500 }
+                      const list = JSON.parse(localStorage.getItem('mock_interviews') || '[]')
+                      list.push(entry)
+                      localStorage.setItem('mock_interviews', JSON.stringify(list))
+                      localStorage.removeItem('mock_topics')
+                      document.getElementById('mock-name').value = ''
+                      document.getElementById('mock-email').value = ''
+                      document.getElementById('mock-date').value = ''
+                      document.getElementById('mock-time').value = ''
+                      alert('Scheduled! We saved your mock interview (simulated) for ' + date + ' ' + time + '. Amount: ₹500')
+                    }}>
+                      Schedule Mock Interview — ₹500
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="stat-section">
           <div className="page-wrap stat-strip">
             {platformStats.map((stat) => (
