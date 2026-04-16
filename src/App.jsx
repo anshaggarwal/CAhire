@@ -149,11 +149,11 @@ export default function App() {
                 <p>Mumbai • ₹18-24 LPA • 5+ years</p>
               </div>
               {/* overlapping bubbles */}
-              <div className="showcase-bubble bubble-1">
+              <div className="showcase-bubble bubble-large" aria-hidden>
                 <div className="bubble-label">Profiles</div>
                 <strong>CA-ready</strong>
               </div>
-              <div className="showcase-bubble bubble-2">
+              <div className="showcase-bubble bubble-2 small" aria-hidden>
                 <div className="bubble-label">Companies</div>
                 <strong>190+</strong>
               </div>

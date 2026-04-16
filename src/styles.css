@@ -379,16 +379,14 @@ button{
 /* overlapping small bubbles on hero card */
 .showcase-bubble{
   position:absolute;
-  min-width:120px;
-  max-width:220px;
-  padding:12px 14px;
-  border-radius:12px;
+  padding:12px 16px;
+  border-radius:14px;
   background:#fff;
   border:1px solid var(--line);
   box-shadow:var(--shadow-soft);
   display:flex;
   flex-direction:column;
-  gap:6px;
+  gap:8px;
   align-items:flex-start;
   animation:fadeUp 420ms ease both;
 }
@@ -396,23 +394,38 @@ button{
   font-size:12px;
   color:var(--muted);
 }
-.showcase-bubble strong{ font-size:18px; }
-.showcase-bubble.bubble-1{
-  right:18%;
+
+/* Large overlapping CA-ready bubble */
+.showcase-bubble.bubble-large{
+  width:260px;
+  padding:18px 20px;
+  right:8%;
   top:28px;
-  transform:translateX(8%);
+  z-index:30;
+  border-radius:16px;
 }
-.showcase-bubble.bubble-2{
+.showcase-bubble.bubble-large strong{ font-size:22px; line-height:1; }
+
+/* secondary small bubble */
+.showcase-bubble.bubble-2.small{
+  width:140px;
+  padding:10px 12px;
   right:6%;
-  top:92px;
-  transform:translateX(6%);
+  top:140px;
+  z-index:28;
+  border-radius:12px;
 }
 
 /* tweak overlap on smaller screens */
 @media (max-width: 640px){
-  .showcase-bubble{ display:block; min-width:110px; padding:10px }
-  .showcase-bubble.bubble-1{ right:8%; top:18px; transform:none }
-  .showcase-bubble.bubble-2{ right:6%; top:120px; transform:none }
+  .showcase-bubble.bubble-large{
+    right:6%;
+    top:14px;
+    width:180px;
+    padding:12px 14px;
+  }
+  .showcase-bubble.bubble-large strong{ font-size:18px }
+  .showcase-bubble.bubble-2.small{ right:6%; top:110px; width:120px }
 }
 
 
