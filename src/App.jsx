@@ -161,82 +161,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="mock-section">
-          <div className="page-wrap">
-            <div className="workspace-intro">
-              <div>
-                <p className="section-label">Mock Interviews</p>
-                <h3>Schedule a 30-minute mock interview with professional feedback</h3>
-                <p className="problem-text">30-minute mock interview with professional feedback. Select topics and schedule a slot.</p>
-              </div>
-            </div>
-
-            <div className="tab-shell">
-              <div className="mock-card">
-                <form className="stack-form" onSubmit={(e) => e.preventDefault()}>
-                  <div className="topic-list">
-                    <label className="section-label">Select topics</label>
-                    {['Audit', 'Tax Compliance', 'Financial Reporting', 'ERP/Systems', 'Excel & Modelling'].map((t) => (
-                      <label key={t} className="checkline">
-                        <input
-                          type="checkbox"
-                          name="topics"
-                          value={t}
-                          checked={false}
-                          onChange={() => {}}
-                        />
-                        <span>{t}</span>
-                      </label>
-                    ))}
-                  </div>
-
-                  <div className="split-inputs">
-                    <input placeholder="Your full name" name="mockName" />
-                    <input placeholder="Email address" name="mockEmail" />
-                  </div>
-
-                  <div className="split-inputs">
-                    <input type="date" name="mockDate" />
-                    <input type="time" name="mockTime" />
-                  </div>
-
-                  <div className="mock-actions">
-                    <button type="button" className="nav-button" onClick={() => {
-                      // Professional flow: validate and show confirmation card
-                      const form = document.querySelector('.mock-card form')
-                      const name = form.elements['mockName'].value.trim()
-                      const email = form.elements['mockEmail'].value.trim()
-                      const date = form.elements['mockDate'].value
-                      const time = form.elements['mockTime'].value
-                      const checked = Array.from(form.elements['topics'] || [])
-                        .filter((el) => el.checked)
-                        .map((el) => el.value)
-                      if (!name || !email || !date || !time || checked.length === 0) {
-                        alert('Please provide full name, email, select at least one topic, and pick a slot.')
-                        return
-                      }
-                      const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics: checked, price:250 }
-                      const list = JSON.parse(localStorage.getItem('mock_interviews') || '[]')
-                      list.push(entry)
-                      localStorage.setItem('mock_interviews', JSON.stringify(list))
-                      // Show a polished inline confirmation
-                      const conf = document.querySelector('.mock-confirmation')
-                      if (conf) conf.remove()
-                      const node = document.createElement('div')
-                      node.className = 'mock-confirmation'
-                      node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹250 — payment pending at checkout.</p>`
-                      document.querySelector('.mock-card').appendChild(node)
-                      // Clear form
-                      form.reset()
-                    }}>
-                      Schedule Mock Interview — ₹250
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* mock interview section moved below workspace (render later) */}
 
         <section className="stat-section">
           <div className="page-wrap stat-strip">
@@ -365,6 +290,81 @@ export default function App() {
             </div>
           </div>
         </section>
+
+            <section className="mock-section">
+              <div className="page-wrap">
+                <div className="workspace-intro">
+                  <div>
+                    <p className="section-label">Mock Interviews</p>
+                    <h3>Unsure about your skills?</h3>
+                    <p className="problem-text">Book a 30-minute mock interview with an experienced finance recruiter and receive a detailed scorecard highlighting strengths, improvement areas, and next steps.</p>
+                  </div>
+                </div>
+
+                <div className="tab-shell">
+                  <div className="mock-card">
+                    <ul className="mock-benefits">
+                      <li>30-minute live interview</li>
+                      <li>Structured scorecard and written feedback</li>
+                      <li>Actionable recommendations to improve</li>
+                      <li>Email summary with suggested next steps</li>
+                    </ul>
+
+                    <form className="stack-form" onSubmit={(e) => e.preventDefault()}>
+                      <div className="topic-list">
+                        <label className="section-label">Select topics</label>
+                        {['Audit', 'Tax Compliance', 'Financial Reporting', 'ERP/Systems', 'Excel & Modelling'].map((t) => (
+                          <label key={t} className="checkline">
+                            <input type="checkbox" name="topics" value={t} />
+                            <span>{t}</span>
+                          </label>
+                        ))}
+                      </div>
+
+                      <div className="split-inputs">
+                        <input placeholder="Your full name" name="mockName" />
+                        <input placeholder="Email address" name="mockEmail" />
+                      </div>
+
+                      <div className="split-inputs">
+                        <input type="date" name="mockDate" />
+                        <input type="time" name="mockTime" />
+                      </div>
+
+                      <div className="mock-actions">
+                        <button type="button" className="nav-button" onClick={() => {
+                          const form = document.querySelector('.mock-card form')
+                          const name = form.elements['mockName'].value.trim()
+                          const email = form.elements['mockEmail'].value.trim()
+                          const date = form.elements['mockDate'].value
+                          const time = form.elements['mockTime'].value
+                          const checked = Array.from(form.elements['topics'] || [])
+                            .filter((el) => el.checked)
+                            .map((el) => el.value)
+                          if (!name || !email || !date || !time || checked.length === 0) {
+                            alert('Please provide full name, email, select at least one topic, and pick a slot.')
+                            return
+                          }
+                          const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics: checked, price:250 }
+                          const list = JSON.parse(localStorage.getItem('mock_interviews') || '[]')
+                          list.push(entry)
+                          localStorage.setItem('mock_interviews', JSON.stringify(list))
+                          const conf = document.querySelector('.mock-confirmation')
+                          if (conf) conf.remove()
+                          const node = document.createElement('div')
+                          node.className = 'mock-confirmation'
+                          node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹250 — payment pending at checkout.</p>`
+                          document.querySelector('.mock-card').appendChild(node)
+                          form.reset()
+                        }}>
+                          Schedule Mock Interview — ₹250
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
 
         <section className="pricing-section">
           <div className="page-wrap pricing-wrap">
