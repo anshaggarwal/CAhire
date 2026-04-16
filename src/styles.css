@@ -632,41 +632,14 @@ button{
   gap:20px;
 }
 
-.payment-row{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  margin-top:16px;
-}
-
-.razorpay-badge{
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  padding:8px 10px;
-  border-radius:999px;
-  background:#111827;
-  color:#fff;
-  font-weight:700;
-  font-size:13px;
-  box-shadow:0 12px 34px rgba(17,24,39,0.14);
-}
-
-.razorpay-badge svg{
-  display:block;
-  width:18px;
-  height:18px;
-  opacity:0.98;
-}
+/* Razorpay badge removed; annual CTA uses standard nav-button */
 
 /* Slight lift for the featured/golden card so it reads as the payment CTA */
 .pricing-card.best-value{
   transform:translateY(-6px);
 }
 
-.nav-button.gold:hover{
-  transform:translateY(-2px) scale(1.01);
-}
+
 
 .pricing-card{
   border:1px solid var(--line);
@@ -704,12 +677,7 @@ button{
 }
 
 /* Gold action button */
-.nav-button.gold{
-  background:linear-gradient(180deg,#f6c84c 0%,#e6a700 100%);
-  color:#1b1200;
-  box-shadow:0 12px 30px rgba(230,167,0,0.18);
-  border-color:rgba(0,0,0,0.03);
-}
+
 
 .pricing-card.best-value strong{
   color:#6b3f00;

@@ -272,19 +272,9 @@ export default function App() {
                   <li>Best value for long-term access</li>
                   <li>Priority membership plan</li>
                 </ul>
-                <div className="payment-row">
-                  <button type="button" className="nav-button gold">
-                    Join Annually
-                  </button>
-                  <div className="razorpay-badge" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <rect x="1" y="4" width="22" height="16" rx="3" fill="#fff" opacity="0" />
-                      <path d="M3 7h18v2H3zM3 15h18v2H3z" fill="#fff" opacity="0.06" />
-                      <circle cx="7" cy="12" r="3" fill="#fff" opacity="0.12" />
-                    </svg>
-                    <span>Razorpay</span>
-                  </div>
-                </div>
+                <button type="button" className="nav-button">
+                  Join Annually
+                </button>
               </article>
             </div>
           </div>
