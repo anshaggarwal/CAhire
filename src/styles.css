@@ -1231,6 +1231,40 @@ textarea:focus{
   }
 }
 
+/* Header / Topbar mobile optimizations (compress brand, hide subtitle, tighten spacing) */
+@media (max-width: 540px){
+  .topbar{ padding:6px 0; }
+  .topbar-inner{
+    grid-template-columns:auto 1fr auto;
+    gap:8px;
+    min-height:56px;
+    align-items:center;
+  }
+
+  .brand-mark{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    transform:none;
+    box-shadow:0 6px 14px rgba(31,41,55,0.06);
+  }
+
+  .brand-chip{ width:7px; height:7px }
+  .brand-stem{ width:14px; height:6px; left:10px; top:14px }
+
+  .brand-block h1{ font-size:18px; margin:0 }
+  .brand-sub{ display:none }
+
+  .topbar-nav{ display:flex; gap:10px; overflow-x:auto; white-space:nowrap; font-size:14px; }
+  .topbar-nav button{ padding:8px 10px; }
+
+  .topbar-actions{ gap:8px }
+  .nav-button, .nav-button.ghost{ padding:8px 10px; font-size:14px }
+
+  /* Reduce hero/title on very small screens */
+  .hero-center h2{ font-size:28px }
+}
+
 /* Additional mobile / small-screen optimizations */
 @media (max-width: 960px){
   .pricing-grid{ grid-template-columns: 1fr; }
