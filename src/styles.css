@@ -212,6 +212,36 @@ button{
   gap:12px;
 }
 
+/* Hamburger button (hidden on desktop) */
+.hamburger{
+  display:none;
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  background:transparent;
+  border:1px solid transparent;
+  padding:6px;
+  align-items:center;
+  justify-content:center;
+}
+.hamburger span{ display:block; height:2px; background:var(--muted); margin:4px 0; border-radius:2px }
+
+/* Mobile drawer */
+.mobile-drawer{ position:fixed; inset:0; z-index:60; display:flex; }
+.drawer-backdrop{ position:absolute; inset:0; background:rgba(15,23,42,0.42); }
+.drawer-panel{ position:relative; margin-left:auto; width:min(320px, 86%); height:100%; background:#fff; box-shadow:0 30px 80px rgba(17,24,39,0.32); padding:18px; display:flex; flex-direction:column; gap:12px }
+.drawer-header{ display:flex; justify-content:space-between; align-items:center }
+.drawer-close{ background:transparent; border:none; font-size:22px }
+.drawer-links{ display:flex; flex-direction:column; gap:8px; margin-top:8px }
+.drawer-links button{ text-align:left; padding:12px; border-radius:8px; border:none; background:transparent }
+.drawer-actions{ margin-top:auto; display:flex; flex-direction:column; gap:8px }
+
+@media (max-width: 640px){
+  .topbar-nav{ display:none }
+  .hamburger{ display:flex }
+  .topbar-actions{ gap:8px }
+}
+
 .nav-button,
 .search-row button,
 .stack-form button,
