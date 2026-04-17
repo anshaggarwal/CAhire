@@ -520,35 +520,27 @@ button{
 
 /* Meet our Alumini section */
 .meet-alumini-section{
-  padding:56px 0;
-  color:var(--text);
-  background:linear-gradient(180deg, rgba(59,130,246,0.06), rgba(255,255,255,0.0));
+  padding:0 0 28px 0;
   position:relative;
   overflow:hidden;
 }
-.meet-alumini-section::before{
-  content:"";
+.meet-hero{ position:relative; border-radius:12px; overflow:hidden }
+.meet-hero img{ display:block; width:100%; height:340px; object-fit:cover; border-radius:12px }
+.meet-overlay{
   position:absolute;
-  inset:0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%23ffffff' stop-opacity='0.18'/><stop offset='1' stop-color='%23f3f7fc' stop-opacity='0.06'/></linearGradient></defs><rect width='800' height='400' fill='url(%23g)'/><g fill='%232f6db7' fill-opacity='0.06'><circle cx='120' cy='120' r='36'/><rect x='88' y='170' width='64' height='36' rx='18'/><circle cx='280' cy='90' r='30'/><rect x='252' y='130' width='56' height='28' rx='14'/><circle cx='520' cy='140' r='40'/><rect x='488' y='192' width='64' height='36' rx='18'/></g><g fill='%23000000' fill-opacity='0.03'><rect x='0' y='320' width='800' height='80'/></g></svg>");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center right;
-  pointer-events:none;
+  left:40px;
+  top:36px;
+  color:var(--text);
+  max-width:540px;
+  text-shadow:0 4px 18px rgba(0,0,0,0.08);
 }
-.meet-inner{
-  display:flex;
-  gap:28px;
-  align-items:center;
-}
-.meet-copy{ flex:1; max-width:520px }
-.meet-cta{ margin-top:18px; display:flex; gap:12px }
-.meet-cards{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; flex:1 }
-.meet-card{ padding:20px; border-radius:12px; background:rgba(255,255,255,0.9); box-shadow:var(--shadow-soft); border:1px solid var(--line) }
+.meet-overlay .section-label{ color:var(--accent); }
+.meet-overlay h3{ margin:8px 0 6px; color:#0b2440 }
+.meet-overlay p{ color:var(--muted); max-width:44ch }
 
 @media (max-width: 880px){
-  .meet-inner{ flex-direction:column }
-  .meet-cards{ grid-template-columns:1fr }
+  .meet-hero img{ height:220px }
+  .meet-overlay{ left:18px; top:18px }
 }
 
 .problem-section{
