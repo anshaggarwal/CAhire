@@ -12,21 +12,80 @@ export default function AluminiTab() {
             </div>
           </div>
 
-          <div className="listing-grid">
-            <article className="listing-card">
-              <h4>Alumni Spotlight: Sneha R.</h4>
-              <p className="listing-copy">Senior Finance Manager — tips on transitioning from articleship to leadership roles.</p>
-            </article>
+          <div className="jobs-paywall-shell">
+            <div className="listing-grid jobs-preview">
+              <article className="listing-card">
+                <div className="listing-topline">
+                  <div className="brand-lockup">
+                    <div className="logo-tile">S</div>
+                    <div>
+                      <h4>Alumni Spotlight: Sneha R.</h4>
+                      <p className="company-line">Senior Finance Manager</p>
+                    </div>
+                  </div>
+                  <span className="status-badge verified">Verified</span>
+                </div>
+                <p className="listing-copy">Tips on transitioning from articleship to leadership roles.</p>
+                <div className="card-footer">
+                  <div className="job-card-cta">
+                    <span className="posted-line">Unlock membership to view contact & full profile</span>
+                  </div>
+                  <button type="button" className="small">View profile</button>
+                </div>
+              </article>
 
-            <article className="listing-card">
-              <h4>Alumni Spotlight: Rajiv K.</h4>
-              <p className="listing-copy">Tax specialist sharing CV feedback and interview prep notes.</p>
-            </article>
+              <article className="listing-card">
+                <div className="listing-topline">
+                  <div className="brand-lockup">
+                    <div className="logo-tile">R</div>
+                    <div>
+                      <h4>Alumni Spotlight: Rajiv K.</h4>
+                      <p className="company-line">Tax specialist</p>
+                    </div>
+                  </div>
+                  <span className="status-badge">Member</span>
+                </div>
+                <p className="listing-copy">Sharing CV feedback and interview prep notes.</p>
+                <div className="card-footer">
+                  <div className="job-card-cta">
+                    <span className="posted-line">Unlock membership to view contact & full profile</span>
+                  </div>
+                  <button type="button" className="small">View profile</button>
+                </div>
+              </article>
 
-            <article className="listing-card">
-              <h4>Alumni Forum</h4>
-              <p className="listing-copy">Join discussions, post questions, and find mentors from CA firms and finance teams.</p>
-            </article>
+              <article className="listing-card">
+                <div className="listing-topline">
+                  <div className="brand-lockup">
+                    <div className="logo-tile">F</div>
+                    <div>
+                      <h4>Alumni Forum</h4>
+                      <p className="company-line">Community discussions & mentorship</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="listing-copy">Join discussions, post questions, and find mentors from CA firms and finance teams.</p>
+                <div className="card-footer">
+                  <div className="job-card-cta">
+                    <span className="posted-line">Unlock membership to access forum threads</span>
+                  </div>
+                  <button type="button" className="small">Open</button>
+                </div>
+              </article>
+            </div>
+
+            <div className="content-paywall" aria-hidden="true">
+              <div className="paywall-card">
+                <div className="paywall-lock">LOCK</div>
+                <p className="section-label">Members only</p>
+                <h4>Unlock full alumni profiles</h4>
+                <p className="paywall-copy">View contact details, full career history, and message alumni directly.</p>
+                <div className="paywall-actions">
+                  <button type="button" className="nav-button">Join Monthly</button>
+                  <button type="button" className="nav-button ghost">Join Annually</button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
