@@ -3,11 +3,13 @@ import EmployerTab from './components/EmployerTab'
 import CATab from './components/CATab'
 import ArticleshipTab from './components/ArticleshipTab'
 import CompanyTab from './components/CompanyTab'
+import AluminiTab from './components/AluminiTab'
 import { hiringHighlights, platformStats } from './content'
 
 const tabs = [
   { id: 'jobs', label: 'Jobs' },
   { id: 'company', label: 'Companies' },
+  { id: 'alumini', label: 'Alumini' },
   { id: 'articleship', label: 'Articleship' },
   { id: 'cas', label: 'CA Profiles' },
 ]
@@ -59,6 +61,9 @@ export default function App() {
             <button type="button" onClick={() => setTab('company')}>
               Companies
             </button>
+            <button type="button" onClick={() => setTab('alumini')}>
+              Alumini
+            </button>
             <button type="button" onClick={() => setTab('articleship')}>
               Articleship
             </button>
@@ -94,6 +99,7 @@ export default function App() {
                 <div className="drawer-links">
                   <button onClick={() => { setTab('jobs'); setMobileMenuOpen(false) }}>Jobs</button>
                   <button onClick={() => { setTab('company'); setMobileMenuOpen(false) }}>Companies</button>
+                  <button onClick={() => { setTab('alumini'); setMobileMenuOpen(false) }}>Alumini</button>
                   <button onClick={() => { setTab('articleship'); setMobileMenuOpen(false) }}>Articleship</button>
                   <button onClick={() => { setTab('cas'); setMobileMenuOpen(false) }}>CA Profiles</button>
                 </div>
@@ -261,10 +267,11 @@ export default function App() {
               <div>
                 <p className="section-label">Workspace</p>
                 <h3>
-                  {tab === 'jobs' && 'Browse verified CA jobs'}
-                  {tab === 'company' && 'Post and manage company roles'}
-                  {tab === 'articleship' && 'Explore articleship openings'}
-                  {tab === 'cas' && 'Review CA profiles'}
+                    {tab === 'jobs' && 'Browse verified CA jobs'}
+                    {tab === 'company' && 'Post and manage company roles'}
+                    {tab === 'alumini' && 'Explore alumni network'}
+                    {tab === 'articleship' && 'Explore articleship openings'}
+                    {tab === 'cas' && 'Review CA profiles'}
                 </h3>
               </div>
             </div>
@@ -285,6 +292,7 @@ export default function App() {
 
               {tab === 'jobs' && <EmployerTab />}
               {tab === 'company' && <CompanyTab />}
+              {tab === 'alumini' && <AluminiTab />}
               {tab === 'articleship' && <ArticleshipTab />}
               {tab === 'cas' && <CATab />}
             </div>
