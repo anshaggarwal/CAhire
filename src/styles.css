@@ -551,6 +551,38 @@ button{
   .meet-cards{ grid-template-columns:1fr }
 }
 
+/* Mock interviews: subtle background that fits the site */
+.mock-section{
+  padding:64px 0;
+  position:relative;
+  background:linear-gradient(180deg, var(--surface-band-3) 0%, rgba(59,130,246,0.02) 40%, #ffffff 100%);
+  overflow:hidden;
+}
+.mock-section::before{
+  content:"";
+  position:absolute;
+  right:-10%;
+  top:-10%;
+  width:600px;
+  height:600px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'><g fill='%232f6db7' fill-opacity='0.06'><circle cx='120' cy='120' r='80'/><circle cx='300' cy='220' r='120'/><circle cx='480' cy='120' r='80'/></g><g fill='%230b2440' fill-opacity='0.03'><rect x='40' y='420' width='520' height='120' rx='60'/></g></svg>");
+  background-repeat:no-repeat;
+  background-size:contain;
+  transform:rotate(8deg);
+  pointer-events:none;
+}
+.mock-section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(800px 200px at 10% 20%, rgba(56,126,209,0.03), transparent 20%);
+  pointer-events:none;
+}
+
+@media (max-width: 880px){
+  .mock-section::before{ right:-30%; top:-30%; width:420px; height:420px }
+}
+
 .problem-section{
   padding:64px 0;
   background:linear-gradient(180deg, #fbfcfe 0%, #f2f7fd 100%);
