@@ -374,15 +374,32 @@ export default function App() {
               </div>
             </section>
 
-        <section className="meet-alumini-section" aria-label="Meet our Alumini">
+        <section className="meet-alumini-section">
           <div className="page-wrap">
-            <div className="meet-hero">
-              {/* Drop your banner at "client/src/assets/meet-banner.jpg" */}
-              <img src="./assets/meet-banner.jpg" alt="Meet our Alumini" />
-              <div className="meet-overlay">
+            <div className="meet-inner">
+              <div className="meet-copy">
                 <p className="section-label">Community</p>
                 <h3>Meet our Alumini</h3>
                 <p className="problem-text">Connect with former articled students and senior CAs — mentorship, stories, and hiring pathways.</p>
+                <div className="meet-cta">
+                  <button type="button" className="nav-button">Join the community</button>
+                  <button type="button" className="nav-button ghost">Share a story</button>
+                </div>
+              </div>
+
+              <div className="meet-cards">
+                <article className="meet-card">
+                  <h4>Alumni events</h4>
+                  <p>Regional meetups and online panels with hiring managers and mentors.</p>
+                </article>
+                <article className="meet-card">
+                  <h4>Mentor hours</h4>
+                  <p>Book 1:1 sessions for CV review, interviews, and career advice.</p>
+                </article>
+                <article className="meet-card">
+                  <h4>Stories & insights</h4>
+                  <p>Read transition stories from articleship to leadership roles.</p>
+                </article>
               </div>
             </div>
           </div>
