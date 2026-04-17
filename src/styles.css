@@ -325,6 +325,29 @@ button{
   pointer-events:none;
 }
 
+/* Branded, subtle background for hero (Hire and Get Hired) */
+.hero-section{
+  position:relative;
+  overflow:visible;
+}
+.hero-section::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:100%;
+  z-index:0;
+  pointer-events:none;
+  background-image: linear-gradient(180deg, rgba(255,255,255,0) 30%, rgba(243,247,252,0.6) 70%), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 400'><defs><linearGradient id='a' x1='0' x2='1'><stop offset='0' stop-color='%230b2440' stop-opacity='0.06'/><stop offset='1' stop-color='%232f6db7' stop-opacity='0.02'/></linearGradient></defs><g transform='translate(40,20)' fill='none' stroke='rgba(47,109,183,0.06)' stroke-width='18' stroke-linecap='round'><path d='M40 260 C160 140 300 140 440 260'/><path d='M520 200 C640 80 780 80 860 200'/></g><g fill='%232f6db7' fill-opacity='0.03'><circle cx='120' cy='90' r='26'/><circle cx='260' cy='70' r='20'/><circle cx='420' cy='110' r='28'/></g></svg>");
+  background-repeat:no-repeat;
+  background-position: left 8% center, center;
+  background-size: 48% auto, cover;
+}
+.hero-center{ position:relative; z-index:1 }
+
+@media (max-width: 880px){
+  .hero-section::before{ background-position:left -10% top 10%; background-size: 80% auto, cover }
+}
+
 .eyebrow,
 .section-label{
   margin:0 0 14px;
