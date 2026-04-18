@@ -474,26 +474,49 @@ button{
 }
 
 .showcase-side{
-  width:180px;
+  width:160px;
   padding:18px;
   text-align:left;
+  left:18%;
+  bottom:12%;
+  animation: floatCard 8s infinite ease-in-out;
 }
 
 .showcase-side strong{
   font-size:26px;
 }
 
-.showcase-side{
-  left:32px;
-  bottom:8px;
-  animation-delay:-1.5s;
-}
-
 .showcase-side.alt{
   left:auto;
-  right:32px;
-  top:54px;
+  right:18%;
+  top:12%;
   animation-delay:-3s;
+}
+
+.showcase-subtle{
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 41, 55, 0.04);
+  padding: 12px 16px;
+  width: 140px;
+  z-index: 5;
+}
+
+.showcase-subtle strong {
+  font-size: 20px;
+}
+
+.subtle-1{
+  left: 32%;
+  top: 15%;
+  animation: floatCard 10s infinite ease-in-out -1s;
+}
+
+.subtle-2{
+  right: 32%;
+  bottom: 15%;
+  animation: floatCard 11s infinite ease-in-out -3s;
 }
 
 .stat-section{
