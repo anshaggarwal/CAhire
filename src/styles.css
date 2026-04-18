@@ -524,15 +524,15 @@ button{
   background:linear-gradient(90deg, rgba(230,235,242,0), rgba(230,235,242,1), rgba(230,235,242,0));
 }
 
-/* Meet our Alumini section */
-.meet-alumini-section{
+/* Meet our Alumni section */
+.meet-alumni-section{
   padding:80px 0;
   color:var(--text);
   background:linear-gradient(180deg, rgba(59,130,246,0.06), rgba(255,255,255,0.0));
   position:relative;
   overflow:hidden;
 }
-.meet-alumini-section::before{
+.meet-alumni-section::before{
   content:"";
   position:absolute;
   inset:0;

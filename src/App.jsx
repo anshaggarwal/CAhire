@@ -37,7 +37,7 @@ export default function App() {
       { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     )
 
-    document.querySelectorAll('.stat-section, .trust-section, .problem-section, .solution-section, .workspace-section, .mock-section, .meet-alumini-section, .pricing-section').forEach((el) => {
+    document.querySelectorAll('.stat-section, .trust-section, .problem-section, .solution-section, .workspace-section, .mock-section, .meet-alumni-section, .pricing-section').forEach((el) => {
       observer.observe(el)
     })
 
@@ -85,7 +85,7 @@ export default function App() {
             <button type="button" onClick={() => navigateToHomeTab('jobs')}>Jobs</button>
             <button type="button" onClick={() => navigateToHomeTab('company')}>Companies</button>
             <button type="button" onClick={() => navigateToHomeTab('articleship')}>Articleship</button>
-            <button type="button" onClick={() => navigateToHomeTab('alumini')}>Alumni</button>
+            <button type="button" onClick={() => navigateToHomeTab('alumni')}>Alumni</button>
           </nav>
 
           <div className="topbar-actions">
@@ -117,7 +117,7 @@ export default function App() {
                   <button onClick={() => navigateToHomeTab('jobs')}>Jobs</button>
                   <button onClick={() => navigateToHomeTab('company')}>Companies</button>
                   <button onClick={() => navigateToHomeTab('articleship')}>Articleship</button>
-                  <button onClick={() => navigateToHomeTab('alumini')}>Alumni</button>
+                  <button onClick={() => navigateToHomeTab('alumni')}>Alumni</button>
                   <button onClick={() => navigateToHomeTab('cas')}>CA Profiles</button>
                 </div>
                 <div className="drawer-actions">

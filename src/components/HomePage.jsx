@@ -3,7 +3,7 @@ import EmployerTab from './EmployerTab'
 import CATab from './CATab'
 import ArticleshipTab from './ArticleshipTab'
 import CompanyTab from './CompanyTab'
-import AluminiTab from './AluminiTab'
+import AlumniTab from './AlumniTab'
 import { hiringHighlights, platformStats } from '../content'
 
 export default function HomePage({ tab, setTab }) {
@@ -11,7 +11,7 @@ export default function HomePage({ tab, setTab }) {
     { id: 'jobs', label: 'Jobs' },
     { id: 'company', label: 'Companies' },
     { id: 'articleship', label: 'Articleship' },
-    { id: 'alumini', label: 'Alumni' },
+    { id: 'alumni', label: 'Alumni' },
     { id: 'cas', label: 'CA Profiles' },
   ]
 
@@ -172,7 +172,7 @@ export default function HomePage({ tab, setTab }) {
                     </>
                   )}
                   {tab === 'company' && 'Post and manage company roles'}
-                  {tab === 'alumini' && (
+                  {tab === 'alumni' && (
                     <>
                       Your <span style={{color: '#f4b400'}}>Golden</span> pass to world of <span style={{color: '#0f9d58'}}>Finance</span>
                     </>
@@ -199,7 +199,7 @@ export default function HomePage({ tab, setTab }) {
 
             {tab === 'jobs' && <EmployerTab />}
             {tab === 'company' && <CompanyTab />}
-            {tab === 'alumini' && <AluminiTab />}
+            {tab === 'alumni' && <AlumniTab />}
             {tab === 'articleship' && <ArticleshipTab />}
             {tab === 'cas' && <CATab />}
           </div>
@@ -318,7 +318,7 @@ export default function HomePage({ tab, setTab }) {
         </div>
       </section>
 
-      <section className="meet-alumini-section">
+      <section className="meet-alumni-section">
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-1" style={{opacity: 0.06}}></div>
           <div className="bg-bubble bubble-3" style={{opacity: 0.06}}></div>
@@ -369,7 +369,7 @@ export default function HomePage({ tab, setTab }) {
 
           <div className="pricing-grid">
             <article className="pricing-card student-tier">
-              <p className="pricing-label">Article's Pack</p>
+              <p className="pricing-label">Articles Pack</p>
               <strong>₹250</strong>
               <span>per month</span>
               <ul className="pricing-points">

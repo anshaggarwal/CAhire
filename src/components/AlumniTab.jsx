@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AluminiTab() {
+export default function AlumniTab() {
   return (
     <div className="tab-panel">
       <div className="preview-shell">
