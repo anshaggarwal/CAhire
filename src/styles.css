@@ -1351,25 +1351,37 @@ button{
 .sidebar-card,
 .listing-card{
   border:1px solid #e1e7f0;
-  border-radius:16px;
-  padding:22px;
-  background:#fff;
-  transition:transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-  box-shadow: 0 8px 24px rgba(31,41,55,0.03), 0 1px 2px rgba(31,41,55,0.04);
+  border-radius:20px;
+  padding:24px;
+  background:rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 8px 24px rgba(31,41,55,0.03), inset 0 1px 0 rgba(255,255,255,0.8);
   animation:fadeUp 500ms ease both;
 }
 
+.sidebar-card:hover,
+.listing-card:hover{
+  transform:translateY(-2px);
+  box-shadow: 0 14px 32px rgba(56,126,209,0.08), inset 0 1px 0 rgba(255,255,255,1);
+  border-color: rgba(174, 191, 214, 0.5);
+}
+
 .search-row input {
-  padding: 14px 18px;
-  border-radius: 12px;
-  border: 1px solid #e1e7f0;
-  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.02);
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: 1px solid #d1d9e6;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.02), inset 0 2px 4px rgba(31, 41, 55, 0.01);
   font-size: 15px;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .search-row input:focus {
-  box-shadow: 0 4px 16px rgba(56, 126, 209, 0.1);
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(56, 126, 209, 0.12), 0 0 0 3px rgba(56, 126, 209, 0.15);
 }
 
 .sidebar-card h4,
@@ -1502,11 +1514,12 @@ textarea:focus{
 .paywall-card{
   width:min(500px, 100%);
   padding:48px 36px;
-  border:1px solid #e1e7f0;
-  border-radius:24px;
-  background:linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(251,253,255,0.98) 100%);
-  backdrop-filter: blur(8px);
-  box-shadow:0 32px 80px rgba(17, 24, 39, 0.08), 0 0 0 1px rgba(56, 126, 209, 0.05);
+  border:1px solid rgba(225, 231, 240, 0.8);
+  border-radius:28px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(248,251,255,0.85) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow:0 32px 80px rgba(17, 24, 39, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
   text-align:center;
   pointer-events:auto;
   animation:fadeUp 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -1519,10 +1532,10 @@ textarea:focus{
   width:64px;
   height:64px;
   border-radius:50%;
-  background:linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
+  background:linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
   color:#fff;
   margin:0 auto 20px;
-  box-shadow:0 12px 24px rgba(17, 24, 39, 0.15), inset 0 1px 1px rgba(255,255,255,0.1);
+  box-shadow:0 12px 28px rgba(56, 126, 209, 0.25), inset 0 1px 1px rgba(255,255,255,0.3);
 }
 
 .paywall-card h4{
