@@ -420,7 +420,7 @@ export default function App() {
             </div>
 
             <div className="pricing-grid">
-              <article className="pricing-card">
+              <article className="pricing-card student-tier">
                 <p className="pricing-label">Article's Pack</p>
                 <strong>₹250</strong>
                 <span>per month</span>
@@ -455,6 +455,7 @@ export default function App() {
                 <span>per year</span>
                 <ul className="pricing-points">
                   <li>Everything in Monthly</li>
+                  <li>First mock interview at just ₹50</li>
                   <li>Best value for long-term access</li>
                   <li>Priority membership plan</li>
                 </ul>

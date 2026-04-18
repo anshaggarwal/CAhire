@@ -893,6 +893,28 @@ button{
   background:#fff;
   box-shadow:var(--shadow-divider);
   transition:transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  position: relative;
+}
+
+.student-tier {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcf9 100%);
+  border-color: #e2f2e6;
+}
+
+.student-tier::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--line), transparent);
+}
+
+@media (max-width: 960px) {
+  .student-tier::after {
+    display: none;
+  }
 }
 
 .featured-pricing{
