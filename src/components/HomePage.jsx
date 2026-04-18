@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EmployerTab from './EmployerTab'
 import CATab from './CATab'
 import ArticleshipTab from './ArticleshipTab'
@@ -7,6 +7,8 @@ import AlumniTab from './AlumniTab'
 import { hiringHighlights, platformStats } from '../content'
 
 export default function HomePage({ tab, setTab }) {
+  const [serviceType, setServiceType] = useState('mock') // 'mock' or '1on1'
+
   const tabs = [
     { id: 'jobs', label: 'Jobs' },
     { id: 'company', label: 'Companies' },
@@ -226,9 +228,35 @@ export default function HomePage({ tab, setTab }) {
         <div className="page-wrap">
           <div className="workspace-intro">
             <div>
-              <p className="section-label">Mock Interviews</p>
-              <h3><span style={{color: '#ef4444'}}>Unsure</span> about your <span style={{color: '#387ed1'}}>skills</span>?</h3>
-              <p className="problem-text">Book a 30-minute mock interview with an experienced finance recruiter and receive a detailed scorecard highlighting strengths, improvement areas, and next steps.</p>
+              <div className="service-switcher">
+                <button 
+                  className={`switcher-pill ${serviceType === 'mock' ? 'active' : ''}`}
+                  onClick={() => setServiceType('mock')}
+                >
+                  Mock Interview
+                </button>
+                <button 
+                  className={`switcher-pill ${serviceType === '1on1' ? 'active' : ''}`}
+                  onClick={() => setServiceType('1on1')}
+                >
+                  1-on-1 Session
+                </button>
+              </div>
+
+              <p className="section-label">{serviceType === 'mock' ? 'Mock Interviews' : 'Expert Guidance'}</p>
+              <h3>
+                {serviceType === 'mock' ? (
+                  <><span style={{color: '#ef4444'}}>Unsure</span> about your <span style={{color: '#387ed1'}}>skills</span>?</>
+                ) : (
+                  <>Need personalized <span style={{color: '#16a34a'}}>guidance</span>?</>
+                )}
+              </h3>
+              <p className="problem-text">
+                {serviceType === 'mock' 
+                  ? 'Book a 30-minute mock interview with an experienced finance recruiter and receive a detailed scorecard highlighting strengths, improvement areas, and next steps.'
+                  : 'Book a 60-minute one-on-one session with a senior Chartered Accountant to discuss career paths, CV reviews, or specific technical challenges.'
+                }
+              </p>
             </div>
           </div>
 
@@ -236,30 +264,53 @@ export default function HomePage({ tab, setTab }) {
             <div className="mock-info">
               <h4>What's included in the session</h4>
               <ul className="mock-benefits">
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  30-minute live interview
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  Structured scorecard and written feedback
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  Actionable recommendations to improve
-                </li>
-                <li>
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  Email summary with suggested next steps
-                </li>
+                {serviceType === 'mock' ? (
+                  <>
+                    <li>
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      30-minute live interview
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Structured scorecard and written feedback
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Actionable recommendations to improve
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Email summary with suggested next steps
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li>
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      60-minute deep dive session
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Personalized career roadmap
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      CV and profile review
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      Direct Q&A with industry expert
+                    </li>
+                  </>
+                )}
               </ul>
               <div style={{display: 'flex', gap: '52px', marginTop: '24px'}}>
                 <div className="mock-price-badge">
-                  <span className="price-val" style={{color: '#16a34a'}}>₹300</span>
+                  <span className="price-val" style={{color: '#16a34a'}}>₹{serviceType === 'mock' ? '300' : '1000'}</span>
                   <span className="price-label">per session</span>
                 </div>
                 <div className="mock-price-badge">
-                  <span className="price-val" style={{color: '#387ed1'}}>30</span>
+                  <span className="price-val" style={{color: '#387ed1'}}>{serviceType === 'mock' ? '30' : '60'}</span>
                   <span className="price-label">minutes</span>
                 </div>
               </div>
@@ -315,19 +366,21 @@ export default function HomePage({ tab, setTab }) {
                       alert('Please provide full name, email, select at least one topic, and pick a slot.')
                       return
                     }
-                    const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics: checked, price:300 }
-                    const list = JSON.parse(localStorage.getItem('mock_interviews') || '[]')
+                    const price = serviceType === 'mock' ? 300 : 1000
+                    const typeLabel = serviceType === 'mock' ? 'Mock Interview' : '1-on-1 Session'
+                    const entry = { id: 'service_' + Date.now(), name, email, date, time, topics: checked, price, type: serviceType }
+                    const list = JSON.parse(localStorage.getItem('scheduled_services') || '[]')
                     list.push(entry)
-                    localStorage.setItem('mock_interviews', JSON.stringify(list))
+                    localStorage.setItem('scheduled_services', JSON.stringify(list))
                     const conf = document.querySelector('.mock-confirmation')
                     if (conf) conf.remove()
                     const node = document.createElement('div')
                     node.className = 'mock-confirmation'
-                    node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹300 — payment pending at checkout.</p>`
+                    node.innerHTML = `<h4>Booking confirmed</h4><p>${typeLabel} for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹${price} — payment pending at checkout.</p>`
                     document.querySelector('.mock-form-wrapper').appendChild(node)
                     form.reset()
                   }}>
-                    Schedule Interview
+                    {serviceType === 'mock' ? 'Schedule Interview' : 'Book 1-on-1 Session'}
                   </button>
                 </div>
               </form>

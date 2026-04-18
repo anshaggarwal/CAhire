@@ -833,6 +833,38 @@ button{
   max-width:720px;
 }
 
+.service-switcher{
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.switcher-pill{
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.switcher-pill:hover{
+  color: var(--text);
+}
+
+.switcher-pill.active{
+  background: #fff;
+  color: var(--accent);
+  box-shadow: 0 4px 12px rgba(56,126,209,0.08);
+}
+
 .mock-section .workspace-intro h3{
   color:var(--text);
   font-weight:500;
