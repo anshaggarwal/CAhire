@@ -470,19 +470,53 @@ button{
 
 .stat-card{
   text-align:center;
-  padding:24px 18px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:#fff;
-  transition:transform 180ms ease, box-shadow 180ms ease;
-  box-shadow:var(--shadow-divider);
+  padding:32px 24px;
+  border:1px solid #e1e7f0;
+  border-radius:24px;
+  background:linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+  transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:0 12px 32px rgba(31, 41, 55, 0.04), inset 0 1px 0 rgba(255,255,255,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--success));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow:0 24px 48px rgba(56, 126, 209, 0.12), inset 0 1px 0 rgba(255,255,255,1);
+  border-color: #aebfd6;
+}
+
+.stat-card:hover::before {
+  opacity: 1;
 }
 
 .stat-card strong{
   display:block;
-  font-size:32px;
-  font-weight:600;
-  margin-bottom:6px;
+  font-size:38px;
+  font-weight:800;
+  letter-spacing: -0.04em;
+  margin-bottom:8px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-card span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .trust-section{
