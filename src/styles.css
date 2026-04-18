@@ -371,10 +371,10 @@ button{
 }
 
 .hero-center h2{
-  font-size: clamp(48px, 8vw, 84px);
+  font-size: clamp(36px, 8vw, 84px);
   line-height: 1.05;
   font-weight: 800;
-  max-width: 12ch;
+  max-width: 15ch;
   letter-spacing: -0.02em;
 }
 
@@ -1491,36 +1491,26 @@ textarea:focus{
     width:min(100vw - 24px, 1120px);
   }
 
-  .hero-center h2{
-    font-size:40px;
-  }
-
   .hero-actions,
   .topbar-actions,
-  .tab-pills,
   .split-inputs,
   .search-row{
     display:grid;
     grid-template-columns:1fr;
   }
 
-  .hero-showcase{
-    height:auto;
-    display:grid;
-    gap:12px;
+  .tab-pills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-
-  .showcase-card,
-  .showcase-main,
-  .showcase-side,
-  .showcase-side.alt{
-    position:relative;
-    left:auto;
-    right:auto;
-    top:auto;
-    bottom:auto;
-    width:100%;
-    transform:none;
+  .tab-pills::-webkit-scrollbar {
+    display: none;
+  }
+  .tab-pills button {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 
   .paywall-actions{
@@ -1559,9 +1549,6 @@ textarea:focus{
 
   .topbar-actions{ gap:8px }
   .nav-button, .nav-button.ghost{ padding:8px 10px; font-size:14px }
-
-  /* Reduce hero/title on very small screens */
-  .hero-center h2{ font-size:28px }
 }
 
 /* Additional mobile / small-screen optimizations */
@@ -1588,7 +1575,6 @@ textarea:focus{
   .badge-row{ gap:6px; }
   .tag{ padding:6px 8px; font-size:12px; }
 
-  .hero-center h2{ font-size:32px; max-width:26ch; }
   .hero-text, .hero-tagline{ font-size:15px; }
 
   .paywall-card{ width:100%; padding:20px; border-radius:12px; }
@@ -1600,7 +1586,6 @@ textarea:focus{
 }
 
 @media (max-width: 420px){
-  .hero-center h2{ font-size:28px; }
   .brand-block h1{ font-size:22px; }
   .page-wrap{ width:calc(100vw - 24px); }
 }
