@@ -4,6 +4,7 @@ import CATab from './components/CATab'
 import ArticleshipTab from './components/ArticleshipTab'
 import CompanyTab from './components/CompanyTab'
 import AluminiTab from './components/AluminiTab'
+import PostJobPage from './components/PostJobPage'
 import { hiringHighlights, platformStats } from './content'
 
 const tabs = [
@@ -17,6 +18,7 @@ const tabs = [
 export default function App() {
   const [tab, setTab] = useState('jobs')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [currentPage, setCurrentPage] = useState('home')
 
   useEffect(() => {
     // lock body scroll when drawer open
@@ -67,31 +69,31 @@ export default function App() {
       </div>
       <header className="topbar">
         <div className="page-wrap topbar-inner">
-          <div className="brand-block">
-            <svg width="40" height="40" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" style={{borderRadius: '10px'}}>
-              <rect width="42" height="42" rx="10" fill="#1e3a8a"/>
-              <circle cx="14" cy="14" r="4" fill="white"/>
-              <circle cx="28" cy="14" r="4" fill="white"/>
-              <circle cx="14" cy="28" r="4" fill="white"/>
-              <circle cx="28" cy="28" r="4" fill="white"/>
-              <path d="M14 14L28 28M28 14L14 28" stroke="white" stroke-width="4" stroke-linecap="round"/>
-            </svg>
-            <div>
-              <h1 style={{fontSize: '26px', fontWeight: '800', letterSpacing: '0.05em', color: '#1e3a8a'}}>CHARTER PRIME</h1>
+            <div className="brand-block" onClick={() => setCurrentPage('home')} style={{cursor: 'pointer'}}>
+              <svg width="40" height="40" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" style={{borderRadius: '10px'}}>
+                <rect width="42" height="42" rx="10" fill="#1e3a8a"/>
+                <circle cx="14" cy="14" r="4" fill="white"/>
+                <circle cx="28" cy="14" r="4" fill="white"/>
+                <circle cx="14" cy="28" r="4" fill="white"/>
+                <circle cx="28" cy="28" r="4" fill="white"/>
+                <path d="M14 14L28 28M28 14L14 28" stroke="white" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <h1 style={{fontSize: '26px', fontWeight: '800', letterSpacing: '0.05em', color: '#1e3a8a'}}>CHARTER PRIME</h1>
+              </div>
             </div>
-          </div>
 
           <nav className="topbar-nav" aria-label="Primary">
-            <button type="button" onClick={() => setTab('jobs')}>
+            <button type="button" onClick={() => { setTab('jobs'); setCurrentPage('home'); }}>
               Jobs
             </button>
-            <button type="button" onClick={() => setTab('company')}>
+            <button type="button" onClick={() => { setTab('company'); setCurrentPage('home'); }}>
               Companies
             </button>
-            <button type="button" onClick={() => setTab('articleship')}>
+            <button type="button" onClick={() => { setTab('articleship'); setCurrentPage('home'); }}>
               Articleship
             </button>
-            <button type="button" onClick={() => setTab('alumini')}>
+            <button type="button" onClick={() => { setTab('alumini'); setCurrentPage('home'); }}>
               Alumini
             </button>
           </nav>
@@ -100,7 +102,7 @@ export default function App() {
             <button type="button" className="nav-button ghost">
               Sign in
             </button>
-            <button type="button" className="nav-button" onClick={() => setTab('company')}>
+            <button type="button" className="nav-button" onClick={() => setCurrentPage('post-job')}>
               Post a job
             </button>
             <button
@@ -124,14 +126,14 @@ export default function App() {
                   <button className="drawer-close" onClick={() => setMobileMenuOpen(false)} aria-label="Close menu">×</button>
                 </div>
                 <div className="drawer-links">
-                  <button onClick={() => { setTab('jobs'); setMobileMenuOpen(false) }}>Jobs</button>
-                  <button onClick={() => { setTab('company'); setMobileMenuOpen(false) }}>Companies</button>
-                  <button onClick={() => { setTab('articleship'); setMobileMenuOpen(false) }}>Articleship</button>
-                  <button onClick={() => { setTab('alumini'); setMobileMenuOpen(false) }}>Alumni</button>
-                  <button onClick={() => { setTab('cas'); setMobileMenuOpen(false) }}>CA Profiles</button>
+                  <button onClick={() => { setTab('jobs'); setMobileMenuOpen(false); setCurrentPage('home'); }}>Jobs</button>
+                  <button onClick={() => { setTab('company'); setMobileMenuOpen(false); setCurrentPage('home'); }}>Companies</button>
+                  <button onClick={() => { setTab('articleship'); setMobileMenuOpen(false); setCurrentPage('home'); }}>Articleship</button>
+                  <button onClick={() => { setTab('alumini'); setMobileMenuOpen(false); setCurrentPage('home'); }}>Alumni</button>
+                  <button onClick={() => { setTab('cas'); setMobileMenuOpen(false); setCurrentPage('home'); }}>CA Profiles</button>
                 </div>
                 <div className="drawer-actions">
-                  <button className="nav-button" onClick={() => { setTab('company'); setMobileMenuOpen(false) }}>
+                  <button className="nav-button" onClick={() => { setCurrentPage('post-job'); setMobileMenuOpen(false) }}>
                     Post a job
                   </button>
                   <button className="nav-button ghost" onClick={() => setMobileMenuOpen(false)}>Sign in</button>
@@ -143,7 +145,11 @@ export default function App() {
       </header>
 
       <main>
-        <section className="hero-section">
+        {currentPage === 'post-job' ? (
+          <PostJobPage />
+        ) : (
+          <>
+            <section className="hero-section">
           <div className="page-wrap hero-center">
             <p className="eyebrow">Verified jobs, company hiring, and articleship</p>
             <h2>Hire and Get Hired in <span style={{color: '#16a34a'}}>Finance</span>.</h2>
@@ -544,6 +550,8 @@ export default function App() {
             </div>
           </div>
         </section>
+        </>
+        )}
       </main>
       <footer className="site-footer">
         <div className="bg-bubbles-container">
