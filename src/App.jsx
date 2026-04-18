@@ -127,7 +127,7 @@ export default function App() {
         <section className="hero-section">
           <div className="page-wrap hero-center">
             <p className="eyebrow">Verified jobs, company hiring, and articleship</p>
-            <h2>Hire and Get Hired in Finance.</h2>
+            <h2>Hire and Get Hired in <span style={{color: '#16a34a'}}>Finance</span>.</h2>
             <p className="hero-text">Clear Roles. Transparent CTC. Better Decisions.</p>
             <p className="hero-tagline">
               A focused platform for <span className="ca-highlight">Chartered Accountants</span>,
@@ -246,7 +246,7 @@ export default function App() {
             <div className="solution-visual">
               <div className="solution-panel">
                 <p className="section-label">What changes here</p>
-                <h3>Cleaner discovery. Better matching. Faster hiring.</h3>
+                <h3><span style={{color: '#387ed1'}}>Cleaner</span> discovery. Better matching. <span style={{color: '#16a34a'}}>Faster</span> hiring.</h3>
               </div>
             </div>
 
@@ -277,7 +277,11 @@ export default function App() {
               <div>
                 <p className="section-label">Workspace</p>
                 <h3>
-                    {tab === 'jobs' && 'Browse verified CA jobs'}
+                    {tab === 'jobs' && (
+                      <>
+                        Your <span style={{color: '#f4b400'}}>Golden</span> <span style={{color: '#387ed1'}}>Ticket</span> to world of <span style={{color: '#0f9d58'}}>Finance</span>
+                      </>
+                    )}
                     {tab === 'company' && 'Post and manage company roles'}
                     {tab === 'alumini' && (
                       <>
@@ -322,7 +326,7 @@ export default function App() {
                 <div className="workspace-intro">
                   <div>
                     <p className="section-label">Mock Interviews</p>
-                    <h3>Unsure about your skills?</h3>
+                    <h3><span style={{color: '#ef4444'}}>Unsure</span> about your <span style={{color: '#387ed1'}}>skills</span>?</h3>
                     <p className="problem-text">Book a 30-minute mock interview with an experienced finance recruiter and receive a detailed scorecard highlighting strengths, improvement areas, and next steps.</p>
                   </div>
                 </div>
@@ -401,7 +405,7 @@ export default function App() {
             <div className="meet-inner">
               <div className="meet-copy">
                 <p className="section-label">Community</p>
-                <h3>Meet our Alumini</h3>
+                <h3>Meet our <span style={{color: '#f4b400'}}>Alumini</span></h3>
                 <p className="problem-text">Connect with former articled students and senior CAs — mentorship, stories, and hiring pathways.</p>
                 <div className="meet-cta">
                   <button type="button" className="nav-button">Join the community</button>
@@ -435,7 +439,7 @@ export default function App() {
           <div className="page-wrap pricing-wrap">
             <div className="pricing-copy">
               <p className="section-label">Membership</p>
-              <h3>Choose a simple membership plan.</h3>
+              <h3>Choose a <span style={{color: '#387ed1'}}>simple</span> membership plan.</h3>
               <p className="pricing-text">
                 Choose a monthly or annual membership to access the full platform experience.
               </p>
