@@ -153,32 +153,7 @@ export default function App() {
               <span>Articleship opportunities</span>
             </div>
 
-            <div className="hero-showcase" aria-hidden="true">
-              <div className="showcase-card showcase-main">
-                <div className="showcase-top">
-                  <span className="showcase-badge">Verified role</span>
-                  <span className="showcase-status">Live</span>
-                </div>
-                <strong>Finance Manager</strong>
-                <p>Mumbai • ₹18-24 LPA • 5+ years</p>
-              </div>
-              <div className="showcase-card showcase-side">
-                <span>Companies</span>
-                <strong>190+</strong>
-              </div>
-              <div className="showcase-card showcase-side alt">
-                <span>Profiles</span>
-                <strong>CA-ready</strong>
-              </div>
-              <div className="showcase-card showcase-subtle subtle-1">
-                <span>Salaries up to</span>
-                <strong>60 LPA</strong>
-              </div>
-              <div className="showcase-card showcase-subtle subtle-2">
-                <span>Network</span>
-                <strong>Top Firms</strong>
-              </div>
-            </div>
+
           </div>
         </section>
 
