@@ -293,7 +293,11 @@ export default function App() {
                 <h3>
                     {tab === 'jobs' && 'Browse verified CA jobs'}
                     {tab === 'company' && 'Post and manage company roles'}
-                    {tab === 'alumini' && 'Explore alumni network'}
+                    {tab === 'alumini' && (
+                      <>
+                        Your <span style={{color: '#f4b400'}}>Golden</span> pass to world of <span style={{color: '#0f9d58'}}>Finance</span>
+                      </>
+                    )}
                     {tab === 'articleship' && 'Explore articleship openings'}
                     {tab === 'cas' && 'Review CA profiles'}
                 </h3>
