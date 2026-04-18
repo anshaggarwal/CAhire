@@ -147,14 +147,56 @@ export default function PostJobPage() {
           </div>
 
           {/* Centered Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 440px))', gap: '48px', justifyContent: 'center', alignItems: 'stretch' }}>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(3, 1fr)', 
+            gap: '32px', 
+            maxWidth: '1280px', 
+            margin: '0 auto', 
+            alignItems: 'stretch' 
+          }}>
+
+            {/* ARTICLES DELIGHT PLAN */}
+            <article className="pricing-card-premium" style={{
+              background: '#ffffff',
+              border: '1px solid #eef2f6',
+              borderRadius: '40px',
+              padding: '72px 48px',
+              boxShadow: '0 20px 50px rgba(0,0,0,0.03)',
+              display: 'flex',
+              flexDirection: 'column',
+              position: 'relative'
+            }}>
+              <div style={{ marginBottom: '48px' }}>
+                <p style={{ fontSize: '14px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.25em', color: '#10b981', marginBottom: '16px' }}>Articles Delight</p>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
+                  <span style={{ fontSize: '72px', fontWeight: '900', color: '#0f172a', lineHeight: 1, letterSpacing: '-0.05em' }}>₹99</span>
+                </div>
+                <p style={{ fontSize: '17px', color: '#64748b', marginTop: '16px', fontWeight: '600' }}>Per month · Hire articles</p>
+              </div>
+
+              <div style={{ flex: 1 }}>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  {['Post articleship vacancies', '30-day visibility', 'Access to CA Article profiles', 'Direct applications from students'].map((text, i) => (
+                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: '28px', fontSize: '17px', color: '#334155', lineHeight: '1.5', fontWeight: '500' }}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ marginTop: '2px', flexShrink: 0 }}><circle cx="12" cy="12" r="12" fill="#ecfdf5"/><path d="M7 12l3 3 7-7" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      {text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button type="button" className="nav-button premium-btn" style={{ width: '100%', height: '68px', fontWeight: '900', borderRadius: '20px', background: '#10b981', fontSize: '18px', color: '#fff', border: 'none', marginTop: '56px', cursor: 'pointer' }}>
+                Hire Articles
+              </button>
+            </article>
 
             {/* BUFFET PLAN */}
             <article className="pricing-card-premium" style={{
               background: '#ffffff',
               border: '1px solid #eef2f6',
               borderRadius: '40px',
-              padding: '72px 56px',
+              padding: '72px 48px',
               boxShadow: '0 20px 50px rgba(0,0,0,0.03)',
               display: 'flex',
               flexDirection: 'column',
@@ -165,13 +207,13 @@ export default function PostJobPage() {
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
                   <span style={{ fontSize: '72px', fontWeight: '900', color: '#0f172a', lineHeight: 1, letterSpacing: '-0.05em' }}>₹999</span>
                 </div>
-                <p style={{ fontSize: '17px', color: '#64748b', marginTop: '16px', fontWeight: '600' }}>per month · full control</p>
+                <p style={{ fontSize: '17px', color: '#64748b', marginTop: '16px', fontWeight: '600' }}>Per month · Full control</p>
               </div>
 
               <div style={{ flex: 1 }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {['Unlimited job details for 30 days', 'Direct applications from verified CAs', 'Access to verified candidate profiles', 'Standard recruitment dashboard'].map((text, i) => (
-                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '28px', fontSize: '17px', color: '#334155', lineHeight: '1.5', fontWeight: '500' }}>
+                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: '28px', fontSize: '17px', color: '#334155', lineHeight: '1.5', fontWeight: '500' }}>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ marginTop: '2px', flexShrink: 0 }}><circle cx="12" cy="12" r="12" fill="#f1f5f9"/><path d="M7 12l3 3 7-7" stroke="#387ed1" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       {text}
                     </li>
@@ -189,7 +231,7 @@ export default function PostJobPage() {
               background: 'linear-gradient(145deg, #ffffff 0%, #fffdf5 100%)',
               border: '2px solid #fcd34d',
               borderRadius: '40px',
-              padding: '72px 56px',
+              padding: '72px 48px',
               position: 'relative',
               boxShadow: '0 40px 80px rgba(217, 119, 6, 0.12)',
               display: 'flex',
@@ -205,7 +247,7 @@ export default function PostJobPage() {
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
                   <span style={{ fontSize: '72px', fontWeight: '900', color: '#451a03', lineHeight: 1, letterSpacing: '-0.05em' }}>₹9,999</span>
                 </div>
-                <p style={{ fontSize: '17px', color: '#b45309', marginTop: '16px', fontWeight: '600' }}>per hire · white-glove service</p>
+                <p style={{ fontSize: '17px', color: '#b45309', marginTop: '16px', fontWeight: '600' }}>Per hire · White-glove service</p>
               </div>
 
               <div style={{ flex: 1 }}>
