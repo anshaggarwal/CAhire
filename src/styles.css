@@ -51,6 +51,8 @@ body{
   min-width:320px;
   font-family:"Manrope","Inter","Segoe UI",sans-serif;
   color:var(--text);
+  font-size: 17px;
+  line-height: 1.6;
   background:
     linear-gradient(180deg, #ffffff 0%, #fcfdff 50%, #ffffff 100%);
 }
@@ -309,7 +311,8 @@ button{
 .card-footer button{
   border:1px solid transparent;
   border-radius:8px;
-  padding:11px 18px;
+  padding:12px 20px;
+  font-size:16px;
   background:var(--accent);
   color:#fff;
   transition:transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
@@ -397,7 +400,7 @@ button{
 .section-label{
   margin:0 0 14px;
   color:var(--accent);
-  font-size:13px;
+  font-size:15px;
   letter-spacing:0.16em;
   text-transform:uppercase;
 }
@@ -419,14 +422,14 @@ button{
 
 .hero-text{
   margin:24px 0 0;
-  font-size: clamp(18px, 2.5vw, 24px);
+  font-size: clamp(20px, 2.5vw, 26px);
   font-weight: 500;
 }
 
 .hero-tagline{
   margin:16px 0 0;
   color:var(--muted);
-  font-size: clamp(16px, 1.8vw, 19px);
+  font-size: clamp(18px, 2vw, 21px);
   max-width: 60ch;
 }
 
@@ -523,7 +526,7 @@ button{
 
 /* Meet our Alumini section */
 .meet-alumini-section{
-  padding:56px 0;
+  padding:80px 0;
   color:var(--text);
   background:linear-gradient(180deg, rgba(59,130,246,0.06), rgba(255,255,255,0.0));
   position:relative;
@@ -541,14 +544,51 @@ button{
 }
 .meet-inner{
   display:flex;
-  gap:28px;
+  gap:40px;
   align-items:center;
 }
 .meet-copy{ flex:1; max-width:520px }
-.meet-cta{ margin-top:18px; display:flex; gap:12px }
-.meet-cards{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; flex:1 }
-.meet-card{ padding:20px; border-radius:12px; background:rgba(255,255,255,0.9); box-shadow:var(--shadow-soft); border:1px solid var(--line) }
+.meet-copy h3 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.meet-cta{ margin-top:24px; display:flex; gap:12px }
+.meet-cards{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; flex:1 }
 
+.meet-card {
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(31, 41, 55, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(225, 231, 240, 0.8);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.meet-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 40px rgba(56, 126, 209, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1);
+  border-color: rgba(174, 191, 214, 0.6);
+}
+.meet-card h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.meet-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+}
 @media (max-width: 880px){
   .meet-inner{ flex-direction:column }
   .meet-cards{ grid-template-columns:1fr }
@@ -612,8 +652,8 @@ button{
 .problem-text{
   margin:16px 0 0;
   color:var(--muted);
-  font-size:17px;
-  line-height:1.8;
+  font-size:19px;
+  line-height:1.7;
   max-width:54ch;
 }
 
@@ -701,10 +741,10 @@ button{
 }
 
 .trust-copy h3{
-  font-size:32px;
-  line-height:1.3;
-  font-weight:500;
-  max-width:12ch;
+  font-size:34px;
+  line-height:1.2;
+  font-weight:600;
+  max-width:13ch;
 }
 
 .trust-cards{
@@ -1779,7 +1819,7 @@ textarea:focus{
   .topbar-nav button{ padding:8px 10px; }
 
   .topbar-actions{ gap:8px }
-  .nav-button, .nav-button.ghost{ padding:8px 10px; font-size:14px }
+  .nav-button, .nav-button.ghost{ padding:10px 14px; font-size:16px }
 }
 
 /* Additional mobile / small-screen optimizations */
@@ -1801,7 +1841,7 @@ textarea:focus{
 
   .listing-grid{ grid-template-columns: 1fr; }
   .listing-card{ padding:14px; }
-  .listing-card h4{ font-size:18px; }
+  .listing-card h4{ font-size:20px; }
   .logo-tile{ width:36px; height:36px; border-radius:8px; font-size:14px; }
   .badge-row{ gap:6px; }
   .tag{ padding:6px 8px; font-size:12px; }

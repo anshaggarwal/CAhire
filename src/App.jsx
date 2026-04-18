@@ -455,7 +455,7 @@ export default function App() {
           </div>
           <div className="page-wrap">
             <div className="meet-inner">
-              <div className="meet-copy">
+              <div className="meet-copy reveal-element">
                 <p className="section-label">Community</p>
                 <h3>Meet our <span style={{color: '#f4b400'}}>Alumni</span></h3>
                 <p className="problem-text">Connect with former articled students and senior CAs — mentorship, stories, and hiring pathways.</p>
@@ -466,15 +466,15 @@ export default function App() {
               </div>
 
               <div className="meet-cards">
-                <article className="meet-card">
+                <article className="meet-card reveal-element">
                   <h4>Alumni events</h4>
                   <p>Regional meetups and online panels with hiring managers and mentors.</p>
                 </article>
-                <article className="meet-card">
+                <article className="meet-card reveal-element">
                   <h4>Mentor hours</h4>
                   <p>Book 1:1 sessions for CV review, interviews, and career advice.</p>
                 </article>
-                <article className="meet-card">
+                <article className="meet-card reveal-element">
                   <h4>Stories & insights</h4>
                   <p>Read transition stories from articleship to leadership roles.</p>
                 </article>
