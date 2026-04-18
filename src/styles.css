@@ -874,7 +874,7 @@ button{
 .pricing-grid{
   display:grid;
   grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:20px;
+  gap:40px;
 }
 
 /* Razorpay badge removed; annual CTA uses standard nav-button */
@@ -904,13 +904,13 @@ button{
 .student-tier::after {
   content: "";
   position: absolute;
-  right: -12px;
-  top: 5%;
-  bottom: 5%;
-  width: 5px;
-  background: linear-gradient(180deg, transparent, #ccd8e8 20%, #ccd8e8 80%, transparent);
+  right: -22px;
+  top: 10%;
+  bottom: 10%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #94a3b8, transparent);
   border-radius: 99px;
-  box-shadow: 0 0 10px rgba(56, 126, 209, 0.05);
+  opacity: 0.6;
 }
 
 @media (max-width: 960px) {
