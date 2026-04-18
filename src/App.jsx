@@ -176,7 +176,7 @@ export default function App() {
               </div>
             </div>
 
-            <p className="footer-contact">Contact us on support@smallcase.com</p>
+            <p className="footer-contact">Contact us at support@smallcase.com</p>
           </div>
 
           <div className="footer-links">

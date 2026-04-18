@@ -1099,7 +1099,7 @@ button{
 .solution-section,
 .workspace-section,
 .mock-section,
-.meet-alumini-section,
+.meet-alumni-section,
 .pricing-section,
 .site-footer {
   position: relative;
@@ -1897,7 +1897,7 @@ textarea:focus{
 .solution-section, 
 .workspace-section, 
 .mock-section, 
-.meet-alumini-section, 
+.meet-alumni-section, 
 .pricing-section {
   opacity: 0;
   transform: translateY(30px);
@@ -1911,7 +1911,7 @@ textarea:focus{
 .solution-section.visible, 
 .workspace-section.visible, 
 .mock-section.visible, 
-.meet-alumini-section.visible, 
+.meet-alumni-section.visible, 
 .pricing-section.visible {
   opacity: 1;
   transform: translateY(0);
