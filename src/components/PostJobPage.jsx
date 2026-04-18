@@ -322,7 +322,7 @@ export default function PostJobPage() {
                   Wanna make <br/><span style={{ color: '#16a34a' }}>extra income</span>?
                 </h2>
                 <p style={{ fontSize: '20px', color: '#94a3b8', lineHeight: '1.6', marginBottom: '44px', fontWeight: '500', maxWidth: '500px' }}>
-                  Join our elite panel of Chartered Accountants conducting mock interviews. Help candidates sharpen their skills while you earn <span style={{color: '#fff'}}>upto ₹700 per session</span> from the comfort of your home.
+                  Join our elite panel of Chartered Accountants conducting mock interviews and 1-on-1 sessions. Help candidates sharpen their skills while you earn <span style={{color: '#fff'}}>upto ₹700 per session</span> from the comfort of your home.
                 </p>
                 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginTop: '44px' }}>
