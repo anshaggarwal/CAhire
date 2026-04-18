@@ -242,7 +242,7 @@ export default function HomePage({ tab, setTab }) {
                 </li>
               </ul>
               <div className="mock-price-badge">
-                <span className="price-val">₹250</span>
+                <span className="price-val">₹300</span>
                 <span className="price-label">per session</span>
               </div>
             </div>
@@ -297,7 +297,7 @@ export default function HomePage({ tab, setTab }) {
                       alert('Please provide full name, email, select at least one topic, and pick a slot.')
                       return
                     }
-                    const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics: checked, price:250 }
+                    const entry = { id: 'mock_' + Date.now(), name, email, date, time, topics: checked, price:300 }
                     const list = JSON.parse(localStorage.getItem('mock_interviews') || '[]')
                     list.push(entry)
                     localStorage.setItem('mock_interviews', JSON.stringify(list))
@@ -305,7 +305,7 @@ export default function HomePage({ tab, setTab }) {
                     if (conf) conf.remove()
                     const node = document.createElement('div')
                     node.className = 'mock-confirmation'
-                    node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹250 — payment pending at checkout.</p>`
+                    node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹300 — payment pending at checkout.</p>`
                     document.querySelector('.mock-form-wrapper').appendChild(node)
                     form.reset()
                   }}>
@@ -370,7 +370,7 @@ export default function HomePage({ tab, setTab }) {
           <div className="pricing-grid">
             <article className="pricing-card student-tier">
               <p className="pricing-label">Articles Pack</p>
-              <strong>₹250</strong>
+              <strong>₹300</strong>
               <span>per month</span>
               <ul className="pricing-points">
                 <li>Browse articleship</li>
