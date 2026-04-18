@@ -174,6 +174,10 @@ export default function App() {
         {/* mock interview section moved below workspace (render later) */}
 
         <section className="stat-section">
+          <div className="bg-bubbles-container">
+            <div className="bg-bubble bubble-1" style={{opacity: 0.04}}></div>
+            <div className="bg-bubble bubble-3" style={{opacity: 0.04}}></div>
+          </div>
           <div className="page-wrap stat-strip">
             {platformStats.map((stat) => (
               <article key={stat.label} className="stat-card">
@@ -185,6 +189,10 @@ export default function App() {
         </section>
 
         <section className="trust-section">
+          <div className="bg-bubbles-container">
+            <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
+            <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          </div>
           <div className="page-wrap trust-grid">
             <div className="trust-copy">
               <p className="section-label">Built with clarity</p>
@@ -205,6 +213,10 @@ export default function App() {
         </section>
 
         <section className="problem-section">
+          <div className="bg-bubbles-container">
+            <div className="bg-bubble bubble-1" style={{opacity: 0.04}}></div>
+            <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
+          </div>
           <div className="page-wrap problem-grid">
             <div className="problem-copy">
               <p className="section-label">The problem</p>
@@ -240,6 +252,10 @@ export default function App() {
         </section>
 
         <section className="solution-section">
+          <div className="bg-bubbles-container">
+            <div className="bg-bubble bubble-3" style={{opacity: 0.04}}></div>
+            <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          </div>
           <div className="page-wrap solution-grid">
             <div className="solution-visual">
               <div className="solution-panel">
@@ -266,6 +282,10 @@ export default function App() {
         </section>
 
         <section className="workspace-section">
+          <div className="bg-bubbles-container">
+            <div className="bg-bubble bubble-1" style={{opacity: 0.04}}></div>
+            <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          </div>
           <div className="page-wrap">
             <div className="workspace-intro">
               <div>
@@ -304,6 +324,10 @@ export default function App() {
         </section>
 
             <section className="mock-section">
+              <div className="bg-bubbles-container">
+                <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
+                <div className="bg-bubble bubble-3" style={{opacity: 0.04}}></div>
+              </div>
               <div className="page-wrap">
                 <div className="workspace-intro">
                   <div>
@@ -379,6 +403,10 @@ export default function App() {
             </section>
 
         <section className="meet-alumini-section">
+          <div className="bg-bubbles-container">
+            <div className="bg-bubble bubble-1" style={{opacity: 0.06}}></div>
+            <div className="bg-bubble bubble-3" style={{opacity: 0.06}}></div>
+          </div>
           <div className="page-wrap">
             <div className="meet-inner">
               <div className="meet-copy">
@@ -410,6 +438,10 @@ export default function App() {
         </section>
 
         <section className="pricing-section">
+          <div className="bg-bubbles-container">
+            <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
+            <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          </div>
           <div className="page-wrap pricing-wrap">
             <div className="pricing-copy">
               <p className="section-label">Membership</p>
@@ -468,6 +500,10 @@ export default function App() {
         </section>
       </main>
       <footer className="site-footer">
+        <div className="bg-bubbles-container">
+          <div className="bg-bubble bubble-1" style={{opacity: 0.03}}></div>
+          <div className="bg-bubble bubble-4" style={{opacity: 0.03}}></div>
+        </div>
         <div className="page-wrap footer-grid">
           <div className="footer-block">
             <div className="brand-block footer-brand">
