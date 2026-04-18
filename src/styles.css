@@ -480,24 +480,10 @@ button{
   overflow: hidden;
 }
 
-.stat-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--success));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
 .stat-card:hover {
   transform: translateY(-4px);
   box-shadow:0 24px 48px rgba(56, 126, 209, 0.12), inset 0 1px 0 rgba(255,255,255,1);
-  border-color: #aebfd6;
-}
-
-.stat-card:hover::before {
-  opacity: 1;
+  border-color: #c4d4eb;
 }
 
 .stat-card strong{
