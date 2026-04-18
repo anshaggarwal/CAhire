@@ -36,6 +36,10 @@ export default function App() {
 
   return (
     <div className="app-shell">
+      <div className="bg-bubbles-container" style={{position: 'fixed', zIndex: -2}}>
+        <div className="bg-bubble bubble-1" style={{left: '5%', top: '10%', width: '400px', height: '400px', opacity: 0.02}}></div>
+        <div className="bg-bubble bubble-2" style={{right: '5%', bottom: '10%', width: '500px', height: '500px', opacity: 0.02}}></div>
+      </div>
       <header className="topbar">
         <div className="page-wrap topbar-inner">
           <div className="brand-block">
@@ -416,6 +420,20 @@ export default function App() {
             </div>
 
             <div className="pricing-grid">
+              <article className="pricing-card">
+                <p className="pricing-label">Article's Pack</p>
+                <strong>₹250</strong>
+                <span>per month</span>
+                <ul className="pricing-points">
+                  <li>Browse articleship</li>
+                  <li>Apply to firms</li>
+                  <li>Student community</li>
+                </ul>
+                <button type="button" className="nav-button">
+                  Join Articles
+                </button>
+              </article>
+
               <article className="pricing-card">
                 <p className="pricing-label">Monthly</p>
                 <strong>₹500</strong>
