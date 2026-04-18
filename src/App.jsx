@@ -10,7 +10,7 @@ const tabs = [
   { id: 'jobs', label: 'Jobs' },
   { id: 'company', label: 'Companies' },
   { id: 'articleship', label: 'Articleship' },
-  { id: 'alumini', label: 'Alumini' },
+  { id: 'alumini', label: 'Alumni' },
   { id: 'cas', label: 'CA Profiles' },
 ]
 
@@ -127,7 +127,7 @@ export default function App() {
                   <button onClick={() => { setTab('jobs'); setMobileMenuOpen(false) }}>Jobs</button>
                   <button onClick={() => { setTab('company'); setMobileMenuOpen(false) }}>Companies</button>
                   <button onClick={() => { setTab('articleship'); setMobileMenuOpen(false) }}>Articleship</button>
-                  <button onClick={() => { setTab('alumini'); setMobileMenuOpen(false) }}>Alumini</button>
+                  <button onClick={() => { setTab('alumini'); setMobileMenuOpen(false) }}>Alumni</button>
                   <button onClick={() => { setTab('cas'); setMobileMenuOpen(false) }}>CA Profiles</button>
                 </div>
                 <div className="drawer-actions">
@@ -457,7 +457,7 @@ export default function App() {
             <div className="meet-inner">
               <div className="meet-copy">
                 <p className="section-label">Community</p>
-                <h3>Meet our <span style={{color: '#f4b400'}}>Alumini</span></h3>
+                <h3>Meet our <span style={{color: '#f4b400'}}>Alumni</span></h3>
                 <p className="problem-text">Connect with former articled students and senior CAs — mentorship, stories, and hiring pathways.</p>
                 <div className="meet-cta">
                   <button type="button" className="nav-button">Join the community</button>
