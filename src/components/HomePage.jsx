@@ -52,6 +52,8 @@ export default function HomePage({ tab, setTab }) {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-1" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-3" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-sq" style={{top: '20%', left: '10%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-ci" style={{bottom: '20%', right: '10%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap stat-strip">
           {platformStats.map((stat) => (
@@ -67,6 +69,8 @@ export default function HomePage({ tab, setTab }) {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-tr" style={{top: '30%', right: '15%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-sq" style={{bottom: '25%', left: '12%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap trust-grid">
           <div className="trust-copy">
@@ -91,6 +95,8 @@ export default function HomePage({ tab, setTab }) {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-1" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-ci" style={{top: '15%', left: '80%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-tr" style={{bottom: '15%', left: '10%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap problem-grid">
           <div className="problem-copy">
@@ -130,6 +136,8 @@ export default function HomePage({ tab, setTab }) {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-3" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-sq" style={{top: '40%', left: '5%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-ci" style={{bottom: '10%', right: '20%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap solution-grid">
           <div className="solution-visual">
@@ -160,6 +168,8 @@ export default function HomePage({ tab, setTab }) {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-1" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-tr" style={{top: '10%', left: '45%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-sq" style={{bottom: '30%', right: '5%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap">
           <div className="workspace-intro">
@@ -210,6 +220,8 @@ export default function HomePage({ tab, setTab }) {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-3" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-ci" style={{top: '20%', right: '5%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-tr" style={{bottom: '40%', left: '5%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap">
           <div className="workspace-intro">
@@ -241,9 +253,15 @@ export default function HomePage({ tab, setTab }) {
                   Email summary with suggested next steps
                 </li>
               </ul>
-              <div className="mock-price-badge">
-                <span className="price-val">₹300</span>
-                <span className="price-label">per session</span>
+              <div style={{display: 'flex', gap: '52px', marginTop: '24px'}}>
+                <div className="mock-price-badge">
+                  <span className="price-val" style={{color: '#16a34a'}}>₹300</span>
+                  <span className="price-label">per session</span>
+                </div>
+                <div className="mock-price-badge">
+                  <span className="price-val" style={{color: '#387ed1'}}>30</span>
+                  <span className="price-label">minutes</span>
+                </div>
               </div>
             </div>
 
@@ -322,6 +340,8 @@ export default function HomePage({ tab, setTab }) {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-1" style={{opacity: 0.06}}></div>
           <div className="bg-bubble bubble-3" style={{opacity: 0.06}}></div>
+          <div className="bg-geometric shape-sq" style={{top: '50%', right: '10%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-ci" style={{bottom: '10%', left: '15%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap">
           <div className="meet-inner">
@@ -357,6 +377,8 @@ export default function HomePage({ tab, setTab }) {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-tr" style={{top: '15%', left: '5%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-sq" style={{bottom: '20%', right: '8%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap pricing-wrap">
           <div className="pricing-copy">

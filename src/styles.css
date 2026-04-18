@@ -893,11 +893,16 @@ button{
 .mock-price-badge{
   display: inline-flex;
   flex-direction: column;
-  padding: 16px 24px;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 120px;
+  padding: 16px;
   border-radius: 16px;
   background: #fff;
   border: 1px solid #d7e4f6;
   box-shadow: 0 10px 24px rgba(56,126,209,0.08);
+  text-align: center;
 }
 
 .price-val{
@@ -1119,6 +1124,42 @@ button{
   border-radius: 50%;
   filter: blur(100px);
   animation: bubbleFloat 25s infinite ease-in-out;
+}
+
+.bg-geometric {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.05;
+  animation: floatGeometric 30s infinite linear;
+}
+
+@keyframes floatGeometric {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(40px, -60px) rotate(120deg); }
+  66% { transform: translate(-30px, 30px) rotate(240deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.shape-sq {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--accent);
+}
+
+.shape-tr {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 45px solid var(--accent);
+}
+
+.shape-ci {
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
 }
 
 .bubble-1 {

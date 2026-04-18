@@ -34,6 +34,8 @@ export default function PostJobPage() {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-1" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-3" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-sq" style={{top: '15%', left: '10%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-ci" style={{bottom: '20%', right: '15%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap hero-center">
           <p className="eyebrow">Elevate Your Hiring</p>
@@ -47,6 +49,8 @@ export default function PostJobPage() {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-2" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-4" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-tr" style={{top: '25%', right: '10%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-sq" style={{bottom: '30%', left: '10%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap problem-grid">
           <div className="problem-copy">
@@ -81,6 +85,8 @@ export default function PostJobPage() {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-1" style={{opacity: 0.04}}></div>
           <div className="bg-bubble bubble-3" style={{opacity: 0.04}}></div>
+          <div className="bg-geometric shape-ci" style={{top: '10%', right: '20%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-tr" style={{bottom: '15%', left: '5%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap solution-grid">
           <div className="solution-visual">

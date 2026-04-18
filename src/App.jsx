@@ -64,6 +64,14 @@ export default function App() {
         <div className="bg-bubble bubble-4" style={{opacity: 0.03}}></div>
         <div className="bg-bubble bubble-6" style={{opacity: 0.03}}></div>
         <div className="bg-bubble bubble-8" style={{opacity: 0.03}}></div>
+        
+        {/* Geometric Shapes */}
+        <div className="bg-geometric shape-sq" style={{top: '15%', left: '10%', animationDelay: '0s'}}></div>
+        <div className="bg-geometric shape-tr" style={{top: '45%', left: '85%', animationDelay: '-5s'}}></div>
+        <div className="bg-geometric shape-ci" style={{top: '75%', left: '15%', animationDelay: '-10s'}}></div>
+        <div className="bg-geometric shape-sq" style={{top: '25%', left: '70%', animationDelay: '-15s'}}></div>
+        <div className="bg-geometric shape-tr" style={{top: '85%', left: '60%', animationDelay: '-20s'}}></div>
+        <div className="bg-geometric shape-ci" style={{top: '5%', left: '40%', animationDelay: '-25s'}}></div>
       </div>
       <header className="topbar">
         <div className="page-wrap topbar-inner">
@@ -143,6 +151,8 @@ export default function App() {
         <div className="bg-bubbles-container">
           <div className="bg-bubble bubble-1" style={{opacity: 0.03}}></div>
           <div className="bg-bubble bubble-4" style={{opacity: 0.03}}></div>
+          <div className="bg-geometric shape-sq" style={{bottom: '20%', left: '5%', opacity: 0.03}}></div>
+          <div className="bg-geometric shape-ci" style={{top: '10%', right: '10%', opacity: 0.03}}></div>
         </div>
         <div className="page-wrap footer-grid">
           <div className="footer-block">
