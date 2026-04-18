@@ -43,18 +43,16 @@ export default function App() {
       <header className="topbar">
         <div className="page-wrap topbar-inner">
           <div className="brand-block">
-            <div className="brand-mark" aria-hidden="true">
-              <span className="brand-chip chip-top-left" />
-              <span className="brand-chip chip-top-right" />
-              <span className="brand-chip chip-bottom-left" />
-              <span className="brand-chip chip-bottom-right" />
-              <span className="brand-stem" />
-            </div>
+            <svg width="40" height="40" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" style={{borderRadius: '10px'}}>
+              <rect width="42" height="42" rx="10" fill="#1e3a8a"/>
+              <circle cx="14" cy="14" r="4" fill="white"/>
+              <circle cx="28" cy="14" r="4" fill="white"/>
+              <circle cx="14" cy="28" r="4" fill="white"/>
+              <circle cx="28" cy="28" r="4" fill="white"/>
+              <path d="M14 14L28 28M28 14L14 28" stroke="white" stroke-width="4" stroke-linecap="round"/>
+            </svg>
             <div>
-              <h1>CharterPrime</h1>
-              <p className="brand-sub">
-                <span className="ca-highlight">Chartered Accountant</span> hiring platform
-              </p>
+              <h1 style={{fontSize: '26px', fontWeight: '800', letterSpacing: '0.05em', color: '#1e3a8a'}}>CHARTER PRIME</h1>
             </div>
           </div>
 
@@ -511,15 +509,16 @@ export default function App() {
         <div className="page-wrap footer-grid">
           <div className="footer-block">
             <div className="brand-block footer-brand">
-              <div className="brand-mark" aria-hidden="true">
-                <span className="brand-chip chip-top-left" />
-                <span className="brand-chip chip-top-right" />
-                <span className="brand-chip chip-bottom-left" />
-                <span className="brand-chip chip-bottom-right" />
-                <span className="brand-stem" />
-              </div>
+              <svg width="32" height="32" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" style={{borderRadius: '8px'}}>
+                <rect width="42" height="42" rx="10" fill="#1e3a8a"/>
+                <circle cx="14" cy="14" r="4" fill="white"/>
+                <circle cx="28" cy="14" r="4" fill="white"/>
+                <circle cx="14" cy="28" r="4" fill="white"/>
+                <circle cx="28" cy="28" r="4" fill="white"/>
+                <path d="M14 14L28 28M28 14L14 28" stroke="white" stroke-width="4" stroke-linecap="round"/>
+              </svg>
               <div>
-                <h4>CASE PLATFORMS</h4>
+                <h4 style={{fontSize: '20px', fontWeight: '800', letterSpacing: '0.05em', color: '#1e3a8a', margin: 0}}>CHARTER PRIME</h4>
               </div>
             </div>
 
