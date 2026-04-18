@@ -3,17 +3,57 @@ import React from 'react'
 export default function AluminiTab() {
   return (
     <div className="tab-panel">
-      <div className="workspace-grid">
-        <section className="workspace-main">
-          <div className="results-header">
-            <div>
-              <p className="section-label">Alumini</p>
-              <h3>Connect with alumni and mentors</h3>
-            </div>
-          </div>
+      <div className="preview-shell">
+        <div className="workspace-grid content-preview">
+          <aside className="workspace-sidebar">
+            <div className="sidebar-card">
+              <h4>Filters</h4>
+              <div className="filter-group">
+                <label className="section-label">Alumni type</label>
+                <label className="checkline">
+                  <input type="checkbox" defaultChecked />
+                  <span>Mentors</span>
+                </label>
+                <label className="checkline">
+                  <input type="checkbox" defaultChecked />
+                  <span>Hiring Managers</span>
+                </label>
+                <label className="checkline">
+                  <input type="checkbox" />
+                  <span>Recently transitioned</span>
+                </label>
+              </div>
 
-          <div className="jobs-paywall-shell">
-            <div className="listing-grid jobs-preview">
+              <div className="filter-group">
+                <label className="section-label">Industry</label>
+                <input placeholder="Search industry..." />
+              </div>
+            </div>
+
+            <div className="sidebar-card">
+              <span className="section-label">Top Mentors</span>
+              <div className="track-list compact">
+                <div className="track-card">
+                  <strong>Anil S.</strong>
+                  <span>Tax Partner</span>
+                </div>
+                <div className="track-card">
+                  <strong>Megha V.</strong>
+                  <span>CFO • Fintech</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <section className="workspace-main">
+            <div className="results-header">
+              <div>
+                <p className="section-label">Alumni Network</p>
+                <h3>Connect with alumni and mentors</h3>
+              </div>
+            </div>
+
+            <div className="listing-grid">
               <article className="listing-card">
                 <div className="listing-topline">
                   <div className="brand-lockup">
@@ -73,21 +113,21 @@ export default function AluminiTab() {
                 </div>
               </article>
             </div>
+          </section>
+        </div>
 
-            <div className="content-paywall" aria-hidden="true">
-              <div className="paywall-card">
-                <div className="paywall-lock">LOCK</div>
-                <p className="section-label">Members only</p>
-                <h4>Unlock full alumni profiles</h4>
-                <p className="paywall-copy">View contact details, full career history, and message alumni directly.</p>
-                <div className="paywall-actions">
-                  <button type="button" className="nav-button">Join Monthly</button>
-                  <button type="button" className="nav-button ghost">Join Annually</button>
-                </div>
-              </div>
+        <div className="content-paywall" aria-hidden="true">
+          <div className="paywall-card">
+            <div className="paywall-lock">LOCK</div>
+            <p className="section-label">Members only</p>
+            <h4>Unlock full alumni profiles</h4>
+            <p className="paywall-copy">View contact details, full career history, and message alumni directly.</p>
+            <div className="paywall-actions">
+              <button type="button" className="nav-button">Join Monthly</button>
+              <button type="button" className="nav-button ghost">Join Annually</button>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   )
