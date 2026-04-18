@@ -920,6 +920,7 @@ button{
 }
 
 /* background bubbles for a premium feel */
+/* background bubbles for a premium feel */
 .stat-section,
 .trust-section,
 .problem-section,
@@ -937,56 +938,74 @@ button{
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
 }
 
 .bg-bubble {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  animation: bubbleFloat 20s infinite ease-in-out;
+  filter: blur(100px);
+  animation: bubbleFloat 25s infinite ease-in-out;
 }
 
 .bubble-1 {
-  width: 450px;
-  height: 450px;
-  left: -100px;
-  top: -100px;
-  background: radial-gradient(circle, rgba(56, 126, 209, 0.15) 0%, transparent 70%);
+  width: 400px;
+  height: 400px;
+  left: -5%;
+  top: -5%;
+  background: radial-gradient(circle, rgba(56, 126, 209, 0.08) 0%, transparent 70%);
 }
 
 .bubble-2 {
-  width: 500px;
-  height: 500px;
-  right: -150px;
-  top: 10%;
-  background: radial-gradient(circle, rgba(148, 163, 184, 0.1) 0%, transparent 70%);
+  width: 450px;
+  height: 450px;
+  right: -10%;
+  top: 15%;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.06) 0%, transparent 70%);
   animation-delay: -5s;
 }
 
 .bubble-3 {
-  width: 400px;
-  height: 400px;
-  left: 10%;
-  bottom: -50px;
-  background: radial-gradient(circle, rgba(56, 126, 209, 0.12) 0%, transparent 70%);
+  width: 350px;
+  height: 350px;
+  left: 5%;
+  bottom: -10%;
+  background: radial-gradient(circle, rgba(56, 126, 209, 0.07) 0%, transparent 70%);
   animation-delay: -10s;
 }
 
 .bubble-4 {
-  width: 550px;
-  height: 550px;
-  right: 10%;
-  bottom: 10%;
-  background: radial-gradient(circle, rgba(148, 163, 184, 0.1) 0%, transparent 70%);
+  width: 500px;
+  height: 500px;
+  right: 5%;
+  bottom: 5%;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.06) 0%, transparent 70%);
   animation-delay: -15s;
+}
+
+.bubble-5 {
+  width: 300px;
+  height: 300px;
+  left: 40%;
+  top: 10%;
+  background: radial-gradient(circle, rgba(56, 126, 209, 0.05) 0%, transparent 70%);
+  animation-delay: -3s;
+}
+
+.bubble-6 {
+  width: 250px;
+  height: 250px;
+  right: 40%;
+  bottom: 10%;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.04) 0%, transparent 70%);
+  animation-delay: -8s;
 }
 
 @keyframes bubbleFloat {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.05); }
-  66% { transform: translate(-20px, 20px) scale(0.95); }
+  33% { transform: translate(40px, -60px) scale(1.08); }
+  66% { transform: translate(-30px, 30px) scale(0.92); }
 }
 
 .featured-pricing{
