@@ -1002,6 +1002,24 @@ button{
   animation-delay: -8s;
 }
 
+.bubble-7 {
+  width: 320px;
+  height: 320px;
+  left: 20%;
+  top: 60%;
+  background: radial-gradient(circle, rgba(56, 126, 209, 0.04) 0%, transparent 70%);
+  animation-delay: -12s;
+}
+
+.bubble-8 {
+  width: 380px;
+  height: 380px;
+  right: 25%;
+  top: 40%;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.04) 0%, transparent 70%);
+  animation-delay: -18s;
+}
+
 @keyframes bubbleFloat {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33% { transform: translate(40px, -60px) scale(1.08); }

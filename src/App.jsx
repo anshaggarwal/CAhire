@@ -37,8 +37,14 @@ export default function App() {
   return (
     <div className="app-shell">
       <div className="bg-bubbles-container" style={{position: 'fixed', zIndex: -2}}>
-        <div className="bg-bubble bubble-1" style={{left: '5%', top: '10%', width: '400px', height: '400px', opacity: 0.02}}></div>
-        <div className="bg-bubble bubble-2" style={{right: '5%', bottom: '10%', width: '500px', height: '500px', opacity: 0.02}}></div>
+        <div className="bg-bubble bubble-1" style={{opacity: 0.03}}></div>
+        <div className="bg-bubble bubble-3" style={{opacity: 0.03}}></div>
+        <div className="bg-bubble bubble-5" style={{opacity: 0.03}}></div>
+        <div className="bg-bubble bubble-7" style={{opacity: 0.03}}></div>
+        <div className="bg-bubble bubble-2" style={{opacity: 0.03}}></div>
+        <div className="bg-bubble bubble-4" style={{opacity: 0.03}}></div>
+        <div className="bg-bubble bubble-6" style={{opacity: 0.03}}></div>
+        <div className="bg-bubble bubble-8" style={{opacity: 0.03}}></div>
       </div>
       <header className="topbar">
         <div className="page-wrap topbar-inner">
