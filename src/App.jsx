@@ -31,7 +31,26 @@ export default function App() {
     }
 
     window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    )
+
+    document.querySelectorAll('.stat-section, .trust-section, .problem-section, .solution-section, .workspace-section, .mock-section, .meet-alumini-section, .pricing-section').forEach((el) => {
+      observer.observe(el)
+    })
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      observer.disconnect()
+    }
   }, [mobileMenuOpen])
 
   return (
