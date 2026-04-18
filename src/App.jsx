@@ -350,39 +350,72 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="tab-shell">
-                  <div className="mock-card">
+                <div className="mock-card">
+                  <div className="mock-info">
+                    <h4>What's included in the session</h4>
                     <ul className="mock-benefits">
-                      <li>30-minute live interview</li>
-                      <li>Structured scorecard and written feedback</li>
-                      <li>Actionable recommendations to improve</li>
-                      <li>Email summary with suggested next steps</li>
+                      <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        30-minute live interview
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        Structured scorecard and written feedback
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        Actionable recommendations to improve
+                      </li>
+                      <li>
+                        <svg viewBox="0 0 20 20" fill="currentColor" className="check-icon"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        Email summary with suggested next steps
+                      </li>
                     </ul>
+                    <div className="mock-price-badge">
+                      <span className="price-val">₹250</span>
+                      <span className="price-label">per session</span>
+                    </div>
+                  </div>
 
-                    <form className="stack-form" onSubmit={(e) => e.preventDefault()}>
+                  <div className="mock-form-wrapper">
+                    <form className="stack-form mock-form" onSubmit={(e) => e.preventDefault()}>
                       <div className="topic-list">
-                        <label className="section-label">Select topics</label>
-                        {['Audit', 'Tax Compliance', 'Financial Reporting', 'ERP/Systems', 'Excel & Modelling'].map((t) => (
-                          <label key={t} className="checkline">
-                            <input type="checkbox" name="topics" value={t} />
-                            <span>{t}</span>
-                          </label>
-                        ))}
+                        <label className="section-label">Select topics <span style={{textTransform:'none', fontSize:'11px', color:'var(--muted)', fontWeight:'normal'}}>(Pick up to 2)</span></label>
+                        <div className="topic-pills">
+                          {['Audit', 'Tax', 'Reporting', 'ERP', 'Modelling'].map((t) => (
+                            <label key={t} className="topic-pill">
+                              <input type="checkbox" name="topics" value={t} />
+                              <span>{t}</span>
+                            </label>
+                          ))}
+                        </div>
                       </div>
 
                       <div className="split-inputs">
-                        <input placeholder="Your full name" name="mockName" />
-                        <input placeholder="Email address" name="mockEmail" />
+                        <div className="input-group">
+                          <label>Full name</label>
+                          <input placeholder="John Doe" name="mockName" />
+                        </div>
+                        <div className="input-group">
+                          <label>Email address</label>
+                          <input placeholder="john@example.com" name="mockEmail" />
+                        </div>
                       </div>
 
                       <div className="split-inputs">
-                        <input type="date" name="mockDate" />
-                        <input type="time" name="mockTime" />
+                        <div className="input-group">
+                          <label>Date</label>
+                          <input type="date" name="mockDate" />
+                        </div>
+                        <div className="input-group">
+                          <label>Time slot</label>
+                          <input type="time" name="mockTime" />
+                        </div>
                       </div>
 
                       <div className="mock-actions">
-                        <button type="button" className="nav-button" onClick={() => {
-                          const form = document.querySelector('.mock-card form')
+                        <button type="button" className="nav-button mock-submit" onClick={() => {
+                          const form = document.querySelector('.mock-form')
                           const name = form.elements['mockName'].value.trim()
                           const email = form.elements['mockEmail'].value.trim()
                           const date = form.elements['mockDate'].value
@@ -403,10 +436,10 @@ export default function App() {
                           const node = document.createElement('div')
                           node.className = 'mock-confirmation'
                           node.innerHTML = `<h4>Booking confirmed</h4><p>Interview for <strong>${name}</strong> scheduled on <strong>${date}</strong> at <strong>${time}</strong>.</p><p>Topics: ${checked.join(', ')}</p><p>Amount: ₹250 — payment pending at checkout.</p>`
-                          document.querySelector('.mock-card').appendChild(node)
+                          document.querySelector('.mock-form-wrapper').appendChild(node)
                           form.reset()
                         }}>
-                          Schedule Mock Interview — ₹250
+                          Schedule Interview
                         </button>
                       </div>
                     </form>

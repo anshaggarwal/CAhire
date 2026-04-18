@@ -743,29 +743,179 @@ button{
 }
 
 .mock-card{
-  border:1px solid rgba(226,232,240,0.7);
-  padding:20px;
-  border-radius:12px;
-  background:#fff;
-  box-shadow:var(--shadow-divider);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow-divider);
+  border: 1px solid var(--line);
+  overflow: hidden;
 }
 
-.mock-card .stack-form{
-  max-width:760px;
+.mock-info{
+  background: linear-gradient(180deg, var(--surface-band-2) 0%, #ffffff 100%);
+  padding: 40px;
+  border-right: 1px solid var(--line);
 }
 
-.mock-card .mock-benefits{
-  max-width:760px;
-  margin:0 0 12px;
+.mock-info h4{
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
 }
-.topic-list{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px }
-.checkline{ gap:8px; }
-.mock-actions{ margin-top:12px }
-.mock-card input[type=date], .mock-card input[type=time]{ padding:10px }
 
-@media (max-width:640px){
-  .mock-card{ padding:14px }
-  .split-inputs{ grid-template-columns:1fr }
+.mock-benefits{
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 36px;
+  display: grid;
+  gap: 16px;
+}
+
+.mock-benefits li{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.check-icon{
+  width: 20px;
+  height: 20px;
+  color: var(--success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mock-price-badge{
+  display: inline-flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #d7e4f6;
+  box-shadow: 0 10px 24px rgba(56,126,209,0.08);
+}
+
+.price-val{
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.price-label{
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.mock-form-wrapper{
+  padding: 40px;
+}
+
+.mock-form .input-group{
+  display: grid;
+  gap: 8px;
+}
+
+.mock-form label{
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.topic-list{
+  margin-bottom: 24px;
+}
+
+.topic-pills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.topic-pill{
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.topic-pill input{
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.topic-pill span{
+  display: block;
+  padding: 8px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--muted);
+  background: #fff;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.topic-pill:hover span{
+  border-color: #aebfd6;
+  color: var(--text);
+}
+
+.topic-pill input:checked + span{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(56,126,209,0.25);
+  font-weight: 500;
+}
+
+.mock-submit{
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 16px;
+}
+
+.mock-confirmation{
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ecfdf3;
+  border: 1px solid #c6f6d5;
+  color: #065f46;
+}
+
+.mock-confirmation h4{
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.mock-confirmation p{
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 880px){
+  .mock-card{
+    grid-template-columns: 1fr;
+  }
+  .mock-info{
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 28px 20px;
+  }
+  .mock-form-wrapper{
+    padding: 28px 20px;
+  }
+  .split-inputs{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Make the pricing area stand out slightly as a payment section */
@@ -1047,26 +1197,34 @@ button{
 .tab-pills{
   display:flex;
   gap:8px;
-  padding:4px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:var(--surface-soft);
-  margin-bottom:16px;
+  padding:6px;
+  border:1px solid #e1e7f0;
+  border-radius:16px;
+  background:#f8fafc;
+  margin-bottom:24px;
 }
 
 .tab-pills button{
   flex:1;
   border:none;
-  border-radius:10px;
-  padding:12px 14px;
+  border-radius:12px;
+  padding:14px 16px;
   background:transparent;
   color:var(--muted);
+  font-weight:500;
+  font-size:15px;
+  transition:all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-pills button:hover:not(.active){
+  background:rgba(255,255,255,0.6);
+  color:var(--text);
 }
 
 .tab-pills button.active{
   background:var(--accent);
   color:#fff;
-  box-shadow:0 8px 18px rgba(56,126,209,0.18);
+  box-shadow:0 8px 20px rgba(56,126,209,0.25);
 }
 
 .search-row{
@@ -1091,13 +1249,26 @@ button{
 
 .sidebar-card,
 .listing-card{
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:18px;
+  border:1px solid #e1e7f0;
+  border-radius:16px;
+  padding:22px;
   background:#fff;
   transition:transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-  box-shadow:var(--shadow-divider);
+  box-shadow: 0 8px 24px rgba(31,41,55,0.03), 0 1px 2px rgba(31,41,55,0.04);
   animation:fadeUp 500ms ease both;
+}
+
+.search-row input {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #e1e7f0;
+  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.02);
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.search-row input:focus {
+  box-shadow: 0 4px 16px rgba(56, 126, 209, 0.1);
 }
 
 .sidebar-card h4,
@@ -1228,30 +1399,29 @@ textarea:focus{
 }
 
 .paywall-card{
-  width:min(460px, 100%);
-  padding:28px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:rgba(255,255,255,0.96);
-  box-shadow:0 24px 70px rgba(31, 41, 55, 0.14);
+  width:min(500px, 100%);
+  padding:48px 36px;
+  border:1px solid #e1e7f0;
+  border-radius:24px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(251,253,255,0.98) 100%);
+  backdrop-filter: blur(8px);
+  box-shadow:0 32px 80px rgba(17, 24, 39, 0.08), 0 0 0 1px rgba(56, 126, 209, 0.05);
   text-align:center;
   pointer-events:auto;
-  animation:fadeUp 520ms ease both;
+  animation:fadeUp 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .paywall-lock{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-width:72px;
-  padding:10px 14px;
-  border-radius:999px;
-  background:#111827;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
   color:#fff;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:0.18em;
-  margin-bottom:14px;
+  margin:0 auto 20px;
+  box-shadow:0 12px 24px rgba(17, 24, 39, 0.15), inset 0 1px 1px rgba(255,255,255,0.1);
 }
 
 .paywall-card h4{
