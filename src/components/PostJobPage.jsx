@@ -162,7 +162,7 @@ export default function PostJobPage() {
             
             <h3 style={{ fontSize: '48px', fontWeight: '900', color: '#0f172a', marginBottom: '40px', letterSpacing: '-0.04em', lineHeight: '1.1' }}>
               Traditional hiring takes <span style={{ color: '#ef4444' }}>≈ 100 man-hours</span> <br/> 
-              and costs <span style={{ color: '#ef4444' }}>₹2–3 lakh</span> per hire 👍
+              and costs <span style={{ color: '#ef4444' }}>₹2–3 lakh</span> per hire 🤯
             </h3>
             
             <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, #e2e8f0, transparent)', width: '80%', margin: '0 auto 50px' }}></div>
