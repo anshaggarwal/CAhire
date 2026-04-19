@@ -256,41 +256,41 @@ export default function PostJobPage() {
           <div style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(3, 1fr)', 
-            gap: '40px', 
-            maxWidth: '1320px', 
+            gap: '32px', 
+            maxWidth: '1200px', 
             margin: '0 auto', 
             alignItems: 'stretch' 
           }}>
  
             {/* ARTICLES DELIGHT PLAN */}
             <article className="pricing-card-premium" style={{
-              borderRadius: '48px',
-              padding: '80px 56px',
+              borderRadius: '40px',
+              padding: '60px 40px',
               display: 'flex',
               flexDirection: 'column',
               position: 'relative',
               overflow: 'hidden'
             }}>
-              <div style={{ marginBottom: '56px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                  <div style={{ width: '40px', height: '40px', background: '#ecfdf5', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+              <div style={{ marginBottom: '40px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+                  <div style={{ width: '32px', height: '32px', background: '#ecfdf5', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
                   </div>
-                  <p style={{ fontSize: '15px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#10b981', margin: 0 }}>Articles Delight</p>
+                  <p style={{ fontSize: '13px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#10b981', margin: 0 }}>Articles Delight</p>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                  <span style={{ fontSize: '80px', fontWeight: '900', color: '#0f172a', lineHeight: 1, letterSpacing: '-0.05em' }}>₹99</span>
-                  <span style={{ fontSize: '18px', color: '#94a3b8', fontWeight: '600' }}>/mo</span>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                  <span style={{ fontSize: '64px', fontWeight: '900', color: '#0f172a', lineHeight: 1, letterSpacing: '-0.05em' }}>₹99</span>
+                  <span style={{ fontSize: '16px', color: '#94a3b8', fontWeight: '600' }}>/mo</span>
                 </div>
-                <p style={{ fontSize: '17px', color: '#64748b', marginTop: '16px', fontWeight: '600' }}>Perfect for firms hiring articles</p>
+                <p style={{ fontSize: '15px', color: '#64748b', marginTop: '12px', fontWeight: '600' }}>Perfect for firms hiring articles</p>
               </div>
  
               <div style={{ flex: 1 }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {['Post articleship vacancies', '30-day visibility', 'Access to CA Article profiles', 'Direct applications from students'].map((text, i) => (
-                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: '28px', fontSize: '17px', color: '#334155', lineHeight: '1.5', fontWeight: '500' }}>
-                      <div style={{ marginTop: '4px', flexShrink: 0, width: '20px', height: '20px', borderRadius: '50%', background: '#ecfdf5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '14px', marginBottom: '20px', fontSize: '15px', color: '#334155', lineHeight: '1.4', fontWeight: '500' }}>
+                      <div style={{ marginTop: '3px', flexShrink: 0, width: '18px', height: '18px', borderRadius: '50%', background: '#ecfdf5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
                       </div>
                       {text}
                     </li>
@@ -298,40 +298,40 @@ export default function PostJobPage() {
                 </ul>
               </div>
  
-              <button type="button" className="nav-button premium-btn" style={{ width: '100%', height: '72px', fontWeight: '900', borderRadius: '24px', background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', fontSize: '19px', color: '#fff', border: 'none', marginTop: '60px', cursor: 'pointer' }}>
+              <button type="button" className="nav-button premium-btn" style={{ width: '100%', height: '60px', fontWeight: '900', borderRadius: '20px', background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', fontSize: '17px', color: '#fff', border: 'none', marginTop: '40px', cursor: 'pointer' }}>
                 Hire Articles
               </button>
             </article>
  
             {/* BUFFET PLAN */}
             <article className="pricing-card-premium" style={{
-              borderRadius: '48px',
-              padding: '80px 56px',
+              borderRadius: '40px',
+              padding: '60px 40px',
               display: 'flex',
               flexDirection: 'column',
               position: 'relative',
               overflow: 'hidden'
             }}>
-              <div style={{ marginBottom: '56px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                  <div style={{ width: '40px', height: '40px', background: '#eff6ff', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#387ed1" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <div style={{ marginBottom: '40px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+                  <div style={{ width: '32px', height: '32px', background: '#eff6ff', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#387ed1" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                   </div>
-                  <p style={{ fontSize: '15px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#387ed1', margin: 0 }}>Buffet</p>
+                  <p style={{ fontSize: '13px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#387ed1', margin: 0 }}>Buffet</p>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                  <span style={{ fontSize: '80px', fontWeight: '900', color: '#0f172a', lineHeight: 1, letterSpacing: '-0.05em' }}>₹999</span>
-                  <span style={{ fontSize: '18px', color: '#94a3b8', fontWeight: '600' }}>/mo</span>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                  <span style={{ fontSize: '64px', fontWeight: '900', color: '#0f172a', lineHeight: 1, letterSpacing: '-0.05em' }}>₹999</span>
+                  <span style={{ fontSize: '16px', color: '#94a3b8', fontWeight: '600' }}>/mo</span>
                 </div>
-                <p style={{ fontSize: '17px', color: '#64748b', marginTop: '16px', fontWeight: '600' }}>Full control over your hiring</p>
+                <p style={{ fontSize: '15px', color: '#64748b', marginTop: '12px', fontWeight: '600' }}>Full control over your hiring</p>
               </div>
  
               <div style={{ flex: 1 }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {['Unlimited job details for 30 days', 'Direct applications from verified CAs', 'Access to verified candidate profiles', 'Standard recruitment dashboard'].map((text, i) => (
-                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: '28px', fontSize: '17px', color: '#334155', lineHeight: '1.5', fontWeight: '500' }}>
-                      <div style={{ marginTop: '4px', flexShrink: 0, width: '20px', height: '20px', borderRadius: '50%', background: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#387ed1" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '14px', marginBottom: '20px', fontSize: '15px', color: '#334155', lineHeight: '1.4', fontWeight: '500' }}>
+                      <div style={{ marginTop: '3px', flexShrink: 0, width: '18px', height: '18px', borderRadius: '50%', background: '#eff6ff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#387ed1" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
                       </div>
                       {text}
                     </li>
@@ -339,15 +339,15 @@ export default function PostJobPage() {
                 </ul>
               </div>
  
-              <button type="button" className="nav-button premium-btn" style={{ width: '100%', height: '72px', fontWeight: '900', borderRadius: '24px', background: '#0f172a', fontSize: '19px', color: '#fff', border: 'none', marginTop: '60px', cursor: 'pointer' }}>
+              <button type="button" className="nav-button premium-btn" style={{ width: '100%', height: '60px', fontWeight: '900', borderRadius: '20px', background: '#0f172a', fontSize: '17px', color: '#fff', border: 'none', marginTop: '40px', cursor: 'pointer' }}>
                 Post Job Now
               </button>
             </article>
  
             {/* CONCIERGE PLAN */}
             <article className="pricing-card-premium concierge-card-premium" style={{
-              borderRadius: '48px',
-              padding: '80px 56px',
+              borderRadius: '40px',
+              padding: '60px 40px',
               position: 'relative',
               display: 'flex',
               flexDirection: 'column',
@@ -356,18 +356,18 @@ export default function PostJobPage() {
               {/* Premium Badge */}
               <div style={{ 
                 position: 'absolute', 
-                top: '-24px', 
+                top: '-20px', 
                 left: '50%', 
                 transform: 'translateX(-50%)', 
                 background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)', 
                 color: '#fff', 
-                padding: '14px 40px', 
+                padding: '10px 32px', 
                 borderRadius: '99px', 
-                fontSize: '14px', 
+                fontSize: '12px', 
                 fontWeight: '900', 
-                letterSpacing: '0.25em', 
+                letterSpacing: '0.2em', 
                 textTransform: 'uppercase', 
-                boxShadow: '0 20px 40px rgba(217, 119, 6, 0.3)', 
+                boxShadow: '0 15px 30px rgba(217, 119, 6, 0.25)', 
                 whiteSpace: 'nowrap', 
                 zIndex: 10,
                 border: '2px solid rgba(255, 255, 255, 0.3)'
@@ -375,26 +375,26 @@ export default function PostJobPage() {
                 👑 Most Popular
               </div>
  
-              <div style={{ marginBottom: '56px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                  <div style={{ width: '40px', height: '40px', background: '#fffbeb', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d97706" strokeWidth="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <div style={{ marginBottom: '40px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+                  <div style={{ width: '32px', height: '32px', background: '#fffbeb', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" strokeWidth="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   </div>
-                  <p style={{ fontSize: '15px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#d97706', margin: 0 }}>Concierge</p>
+                  <p style={{ fontSize: '13px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#d97706', margin: 0 }}>Concierge</p>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                  <span style={{ fontSize: '80px', fontWeight: '900', color: '#451a03', lineHeight: 1, letterSpacing: '-0.05em' }}>₹9,999</span>
-                  <span style={{ fontSize: '18px', color: '#b45309', fontWeight: '600' }}>/hire</span>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                  <span style={{ fontSize: '64px', fontWeight: '900', color: '#451a03', lineHeight: 1, letterSpacing: '-0.05em' }}>₹9,999</span>
+                  <span style={{ fontSize: '16px', color: '#b45309', fontWeight: '600' }}>/hire</span>
                 </div>
-                <p style={{ fontSize: '17px', color: '#b45309', marginTop: '16px', fontWeight: '600' }}>Elite white-glove recruitment</p>
+                <p style={{ fontSize: '15px', color: '#b45309', marginTop: '12px', fontWeight: '600' }}>Elite white-glove recruitment</p>
               </div>
  
               <div style={{ flex: 1 }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {['Discovery call with our expert team', 'We interview & vet every candidate', 'Top 3 matches delivered to you', 'End-to-end recruitment support'].map((text, i) => (
-                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '28px', fontSize: '17px', color: '#451a03', lineHeight: '1.5', fontWeight: '600' }}>
-                      <div style={{ marginTop: '4px', flexShrink: 0, width: '22px', height: '22px', borderRadius: '50%', background: '#fef3c7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '18px', marginBottom: '20px', fontSize: '15px', color: '#451a03', lineHeight: '1.4', fontWeight: '600' }}>
+                      <div style={{ marginTop: '3px', flexShrink: 0, width: '20px', height: '20px', borderRadius: '50%', background: '#fef3c7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#d97706" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
                       </div>
                       {text}
                     </li>
@@ -404,16 +404,16 @@ export default function PostJobPage() {
  
               <button type="button" className="nav-button premium-btn" style={{ 
                 width: '100%', 
-                height: '72px', 
+                height: '60px', 
                 fontWeight: '900', 
-                borderRadius: '24px', 
+                borderRadius: '20px', 
                 background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', 
                 border: 'none', 
-                fontSize: '19px', 
+                fontSize: '17px', 
                 color: '#fff', 
-                marginTop: '60px', 
+                marginTop: '40px', 
                 cursor: 'pointer',
-                boxShadow: '0 20px 40px rgba(30, 58, 138, 0.25)'
+                boxShadow: '0 15px 30px rgba(30, 58, 138, 0.2)'
               }}>
                 Start Hiring Now
               </button>
