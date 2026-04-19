@@ -383,7 +383,7 @@ export default function PostJobPage() {
                   <p style={{ fontSize: '13px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', color: '#d97706', margin: 0 }}>Concierge</p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-                  <span style={{ fontSize: '64px', fontWeight: '900', color: '#451a03', lineHeight: 1, letterSpacing: '-0.05em' }}>₹9,999</span>
+                  <span style={{ fontSize: '64px', fontWeight: '900', color: '#451a03', lineHeight: 1, letterSpacing: '-0.05em' }}>₹25,000</span>
                   <span style={{ fontSize: '16px', color: '#b45309', fontWeight: '600' }}>/hire</span>
                 </div>
                 <p style={{ fontSize: '15px', color: '#b45309', marginTop: '12px', fontWeight: '600' }}>Elite white-glove recruitment</p>
