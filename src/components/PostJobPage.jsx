@@ -117,6 +117,77 @@ export default function PostJobPage() {
         </div>
       </section>
 
+      {/* SECTION 3.5: THE RECRUITMENT REALITY */}
+      <section className="reality-section visible" style={{ padding: '120px 0', background: 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)', position: 'relative', overflow: 'hidden' }}>
+        {/* Subtle background graphics */}
+        <div style={{ position: 'absolute', top: '10%', right: '-5%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(239, 68, 68, 0.03) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', bottom: '10%', left: '-5%', width: '350px', height: '350px', background: 'radial-gradient(circle, rgba(56, 126, 209, 0.03) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }}></div>
+        
+        <div className="page-wrap">
+          <div style={{ 
+            background: '#fff', 
+            borderRadius: '48px', 
+            padding: '80px 60px', 
+            boxShadow: '0 50px 120px rgba(15, 23, 42, 0.05)',
+            border: '1px solid #eef2f6',
+            textAlign: 'center',
+            maxWidth: '1100px',
+            margin: '0 auto',
+            position: 'relative'
+          }}>
+            <p className="section-label" style={{ color: '#ef4444', letterSpacing: '0.4em', fontWeight: '900', textTransform: 'uppercase', marginBottom: '24px' }}>The Recruitment Reality</p>
+            
+            <h3 style={{ fontSize: '48px', fontWeight: '900', color: '#0f172a', marginBottom: '40px', letterSpacing: '-0.04em', lineHeight: '1.1' }}>
+              Traditional hiring takes <span style={{ color: '#ef4444' }}>≈ 100 man-hours</span> <br/> 
+              and costs <span style={{ color: '#ef4444' }}>₹2–3 lakh</span> per hire 👍
+            </h3>
+            
+            <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, #e2e8f0, transparent)', width: '80%', margin: '0 auto 50px' }}></div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', textAlign: 'left', alignItems: 'center' }}>
+              <div>
+                <h4 style={{ fontSize: '32px', fontWeight: '900', color: '#387ed1', marginBottom: '24px', letterSpacing: '-0.02em' }}>
+                  Why <span style={{ color: '#d97706' }}>Concierge</span> is best?
+                </h4>
+                <p style={{ fontSize: '19px', color: '#475569', lineHeight: '1.7', fontWeight: '500', marginBottom: '32px' }}>
+                  We handle the heavy lifting. No more filtering through 500+ resumes or conducting 15 preliminary rounds just to find one fit. 
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                   {[
+                     { label: 'Zero Resume Fatigue', color: '#387ed1' },
+                     { label: 'Technical Vetting Included', color: '#16a34a' },
+                     { label: 'Only Top 3 Matches Delivered', color: '#d97706' }
+                   ].map((item, i) => (
+                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: `${item.color}15`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={item.color} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                        </div>
+                        <span style={{ fontSize: '17px', fontWeight: '700', color: '#334155' }}>{item.label}</span>
+                     </div>
+                   ))}
+                </div>
+              </div>
+              
+              <div style={{ background: 'linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%)', padding: '48px', borderRadius: '32px', border: '1px solid #e2e8f0', position: 'relative' }}>
+                <div style={{ position: 'absolute', top: '20px', right: '20px', opacity: 0.1 }}>
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#387ed1" strokeWidth="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.6', fontWeight: '600', fontStyle: 'italic' }}>
+                  "We saved over 80 hours of our management's time by switching to Concierge. The quality of candidates was significantly higher than our internal sourcing."
+                </p>
+                <div style={{ marginTop: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#387ed1', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '900', fontSize: '14px' }}>VP</div>
+                  <div>
+                    <p style={{ margin: 0, fontWeight: '800', fontSize: '15px', color: '#0f172a' }}>VP Finance</p>
+                    <p style={{ margin: 0, fontSize: '13px', color: '#64748b', fontWeight: '600' }}>Fortune 500 Manufacturing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 4: PAYMENT OPTIONS */}
       <section className="pricing-section visible" style={{ padding: '160px 0', background: '#ffffff', position: 'relative', overflow: 'hidden' }}>
         
